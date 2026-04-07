@@ -17,13 +17,13 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex shrink-0">
             <Link href="/" className="font-bold text-xl tracking-tight text-slate-800 dark:text-slate-200">
-              Dev<span className="text-blue-600 dark:text-blue-400">Portfolio</span>.
+              Kha<span className="text-blue-600 dark:text-blue-400">Portfolio</span>.
             </Link>
           </div>
 
           {/* Navigation Links */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-8 text-slate-800 dark:text-slate-200">
               <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tentang</a>
               <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Proyek</a>
             </div>

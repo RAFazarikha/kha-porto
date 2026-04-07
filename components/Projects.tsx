@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, GitBranch } from "lucide-react";
 
 export default function Projects() {
   const projects = [
@@ -26,7 +26,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-slate-900/50 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold mb-12 text-center">Proyek Unggulan</h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -57,9 +57,9 @@ export default function Projects() {
                 </div>
                 
                 <div className="flex items-center gap-4">
-                  {/* <a href={project.github} className="flex items-center gap-1 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                    <Github className="w-4 h-4" /> Code
-                  </a> */}
+                  <a href={project.github} className="flex items-center gap-1 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    <GitBranch className="w-4 h-4" /> Code
+                  </a>
                   <a href={project.live} className="flex items-center gap-1 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                     <ExternalLink className="w-4 h-4" /> Live Demo
                   </a>
