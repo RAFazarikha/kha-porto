@@ -1,4 +1,4 @@
-import { Mail, UserRound, GitBranch   } from "lucide-react";
+import { Mail, UserRound, GitBranch, Phone   } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -8,13 +8,16 @@ export default function Footer() {
           © {new Date().getFullYear()} KhaPortfolio. Dirancang dengan Next.js & Tailwind.
         </p>
         <div className="flex gap-6">
-          <a href="#" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          <a href="https://github.com/RAFazarikha" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             <GitBranch className="w-5 h-5" />
           </a>
-          <a href="#" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          <a href="https://www.linkedin.com/in/rachmad-aziz-fazarikha/" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             <UserRound className="w-5 h-5" />
           </a>
-          <a href="#" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+          <a href="https://wa.me/6282143456658" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Phone className="w-5 h-5" />
+          </a>
+          <a href="mailto:fazarikha923@gmail.com" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
             <Mail className="w-5 h-5" />
           </a>
         </div>

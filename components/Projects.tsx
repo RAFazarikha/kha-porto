@@ -1,27 +1,31 @@
 import { ExternalLink, GitBranch } from "lucide-react";
+import Image from "next/image";
 
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Dashboard",
-      description: "Sistem manajemen inventaris dan analitik penjualan dengan visualisasi data interaktif.",
-      tech: ["Next.js", "TypeScript", "Tailwind"],
-      github: "#",
-      live: "#"
+      title: "Open Data Disabilitas",
+      description: "Sistem open data disabilitas yang digunakan oleh Komisi Nasional Disabilitas (KND).",
+      tech: ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
+      github: "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
+      live: "https://opendatadisabilitas.com/",
+      thumbnail: "/projects/knd.png"
     },
     {
-      title: "Platform Edukasi",
-      description: "Aplikasi pembelajaran online dengan fitur streaming video dan kuis real-time.",
-      tech: ["React", "Node.js", "MongoDB"],
-      github: "#",
-      live: "#"
+      title: "Roompi - Room Booking Platform",
+      description: "Aplikasi booking ruangan untuk kebutuhan organisasi ataupun perusahaan.",
+      tech: ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
+      github: "https://github.com/RAFazarikha/peminjaman-ruangan-online",
+      live: "https://roompi-nfa.netlify.app/",
+      thumbnail: "/projects/roompi.png"
     },
     {
       title: "SaaS Task Manager",
       description: "Aplikasi manajemen proyek kolaboratif dengan fitur drag-and-drop Kanban board.",
       tech: ["Next.js", "Prisma", "PostgreSQL"],
       github: "#",
-      live: "#"
+      live: "#",
+      thumbnail: "/projects/knd.png"
     }
   ];
 
@@ -37,7 +41,7 @@ export default function Projects() {
             >
               {/* Placeholder Thumbnail */}
               <div className="h-48 bg-slate-300 dark:bg-slate-700 w-full animate-pulse flex items-center justify-center">
-                 <span className="text-slate-500 dark:text-slate-500 text-sm">Thumbnail Placeholder</span>
+                <Image src={project.thumbnail} alt={project.title} className="object-cover w-full h-full" width={400} height={300} />
               </div>
               
               <div className="p-6">

@@ -23,7 +23,8 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8 text-slate-800 dark:text-slate-200">
+            <div className="mx-auto flex items-baseline space-x-8 text-slate-800 dark:text-slate-200">
+              <a href="#hero" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
               <a href="#about" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tentang</a>
               <a href="#projects" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Proyek</a>
             </div>
