@@ -54,7 +54,7 @@ export default function Projects() {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tag) => (
-                    <span key={tag} className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/30 px-2 py-1 rounded">
+                    <span key={tag} className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded">
                       {tag}
                     </span>
                   ))}

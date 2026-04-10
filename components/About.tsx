@@ -22,7 +22,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="md:w-1/5 items-center text-center justify-center mx-auto p-2 border-4 border-slate-300 dark:border-slate-700 rounded-full">
+          <div className="md:w-1/5 items-center text-center justify-center mx-auto p-2 border-4 border-slate-300 dark:border-slate-700 rounded-full hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
             <Image src="/rachmad-aziz-fazarikha.webp" alt="Rachmad Aziz Fazarikha" className="rounded-full" width={192} height={192} />
           </div>
           
