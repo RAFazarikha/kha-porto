@@ -1,15 +1,6 @@
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import GithubStats from "@/components/GithubStats";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-  return (
-    <main className="min-h-screen">
-      <Hero />
-      <About />
-      <Projects />
-      <GithubStats />
-    </main>
-  );
+export default function RootPage() {
+  // Secara otomatis me-lempar pengunjung ke versi bahasa Indonesia
+  redirect("/en");
 }

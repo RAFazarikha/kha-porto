@@ -1,7 +1,11 @@
 import { ExternalLink, GitBranch } from "lucide-react";
 import Image from "next/image";
 
-export default function Projects() {
+interface ProjectsProps {
+  dict: Record<string, string>;
+}
+
+export default function Projects({ dict }: ProjectsProps) {
   const projects = [
     {
       title: "Open Data Disabilitas",
@@ -32,7 +36,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-slate-900/50 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-center">Proyek Unggulan</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center">{dict.title}</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 

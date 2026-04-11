@@ -1,0 +1,31 @@
+{
+    "home": {
+        "greeting": "I am a ",
+        "greeting2": "Full-stack Web Developer",
+        "description": "I am a Fullstack Web Developer with a passion for creating modern, responsive, and high-performance web applications using the latest technologies.",
+        "button": "View Projects",
+        "button2": "Contact Me"
+    },
+    "about": {
+        "title": "About Me",
+        "description": "Hello! I am Rachmad Aziz Fazarikha, a passionate Fullstack Web Developer and an undergraduate Information Systems student at Universitas Trunojoyo Madura. Over the past 4 years of exploring the technology industry, I have developed a deep interest in building dynamic, efficient, and user-centric web applications from the ground up.",
+        "description2": "I am highly motivated by the challenge of turning complex problems into streamlined digital solutions. By leveraging modern frameworks, I continuously seek to enhance my projects and am always eager to implement my knowledge into impactful, real-world applications that make a difference.",
+        "description3": "I specialize in building full-stack solutions using a modern tech stack that includes:",
+        "description4": "Leveraging this varied ecosystem, I build robust, secure, and performant web applications. My focus is on creating scalable systems that are both elegant in design and powerful in function. My objective is to turn vision into robust digital reality, ensuring seamless integration and future maintainability."
+    },
+    "projects": {
+        "title": "Featured Projects"
+    },
+    "githubStats": {
+        "title": "GitHub Statistics",
+        "totalRepo": "Total Repositories",
+        "totalContrib": "Total Contributions (Last 1 Year)",
+        "history": "Contribution History (Last 1 Year)",
+        "totalFollowing": "Total Following",
+        "totalFollowers": "Total Followers",
+        "totalStars": "Total Stars"
+    },
+    "footer": {
+        "text": "Designed with Next.js & Tailwind."
+    }
+}
