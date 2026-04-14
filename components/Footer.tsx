@@ -1,11 +1,25 @@
+"use client";
+
 import { Mail, UserRound, GitBranch, Phone   } from "lucide-react";
+import { useParams } from "next/navigation";
 
 export default function Footer() {
+  // 1. Mengambil parameter bahasa dari URL (misal: 'id' atau 'en')
+  const params = useParams();
+  const lang = (params?.lang as "id" | "en") || "id";
+
+  // 2. Kamus lokal sederhana khusus untuk teks Footer
+  const footLang = {
+    id: { text: "Dirancang dengan Next.js & Tailwind." },
+    en: { text: "Designed with Next.js & Tailwind." },
+  };
+  const t = footLang[lang] || footLang.id;
+
   return (
     <footer id="contact" className="py-12 border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900/50 text-slate-800 dark:text-slate-200 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
         <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 md:mb-0">
-          © {new Date().getFullYear()} KhaPortfolio. Dirancang dengan Next.js & Tailwind.
+          © {new Date().getFullYear()} KhaPortfolio. {t.text}
         </p>
         <div className="flex gap-6">
           <a href="https://github.com/RAFazarikha" className="text-slate-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">

@@ -7,7 +7,7 @@ export default function Hero({ dict }: HeroProps) {
     <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center min-h-[80vh] bg-[url('/light-bg.svg')] dark:bg-[url('/dark-bg.svg')] bg-cover bg-center bg-no-repeat text-slate-800 dark:text-slate-200 transition-colors">
       
       {/* Overlay untuk memastikan teks tetap terbaca di atas gambar latar */}
-      <div className="absolute inset-0 bg-slate-50/80 dark:bg-slate-900/80 z-0 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-slate-50/50 dark:bg-slate-900/50 z-0 backdrop-blur-sm"></div>
 
       {/* Konten Utama - Tambahkan relative dan z-10 agar berada di atas overlay */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

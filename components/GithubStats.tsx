@@ -168,26 +168,26 @@ export default async function GithubStats({ dict }: GitProps) {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold mb-8 text-center">{dict.title}</h2>
             <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-                <div className="md:col-span-3 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="md:col-span-3 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 border border-slate-300 dark:border-slate-700">
                     <p className="text-slate-600 dark:text-slate-400 text-sm">{dict.totalRepo}</p>
                     <p className="text-3xl text-blue-800 dark:text-blue-400">{stats.repositories.totalCount}</p>
                 </div>
-                <div className="md:col-span-3 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="md:col-span-3 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 border border-slate-300 dark:border-slate-700">
                     <p className="text-slate-600 dark:text-slate-400 text-sm">{dict.totalContrib}</p>
                     <p className="text-3xl text-blue-800 dark:text-blue-400">{stats.contributionsCollection.contributionCalendar.totalContributions}</p>
                 </div>
-                <div className="md:col-span-6 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="md:col-span-6 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 border border-slate-300 dark:border-slate-700">
                     <ContributionGraph weeks={calendarWeeks} dict={dict} />
                 </div>
-                <div className="md:col-span-2 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="md:col-span-2 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 border border-slate-300 dark:border-slate-700">
                     <p className="text-slate-600 dark:text-slate-400 text-sm">{dict.totalFollowing}</p>
                     <p className="text-3xl text-blue-800 dark:text-blue-400">{stats.following.totalCount}</p>
                 </div>
-                <div className="md:col-span-2 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="md:col-span-2 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 border border-slate-300 dark:border-slate-700">
                     <p className="text-slate-600 dark:text-slate-400 text-sm">{dict.totalFollowers}</p>
                     <p className="text-3xl text-blue-800 dark:text-blue-400">{stats.followers.totalCount}</p>
                 </div>
-                <div className="md:col-span-2 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1">
+                <div className="md:col-span-2 p-6 text-slate-600 bg-slate-200 dark:text-slate-400 dark:bg-slate-800 rounded-lg hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 border border-slate-300 dark:border-slate-700">
                     <p className="text-slate-600 dark:text-slate-400 text-sm">{dict.totalStars}</p>
                     <p className="text-3xl text-blue-800 dark:text-blue-400">{totalStars}</p>
                 </div>
