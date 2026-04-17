@@ -24,12 +24,12 @@ export default function Projects({ dict }: ProjectsProps) {
       thumbnail: "/projects/roompi.png"
     },
     {
-      title: "SaaS Task Manager",
-      description: "Aplikasi manajemen proyek kolaboratif dengan fitur drag-and-drop Kanban board.",
-      tech: ["Next.js", "Prisma", "PostgreSQL"],
-      github: "#",
-      live: "#",
-      thumbnail: "/projects/knd.png"
+      title: "Peta Kuliner Sumenep",
+      description: "Aplikasi pencarian dan penampilan peta kuliner di Sumenep.",
+      tech: ["Laravel", "Tailwind CSS", "MySQL"],
+      github: "https://github.com/RAFazarikha/webgis-umkm",
+      live: "https://petakulinersumenep.my.id/",
+      thumbnail: "/projects/petakuliner.png"
     }
   ];
 
@@ -41,7 +41,7 @@ export default function Projects({ dict }: ProjectsProps) {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1"
+              className="group rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 hover:rotate-x-20 hover:rotate-y-20"
             >
               {/* Placeholder Thumbnail */}
               <div className="h-48 bg-slate-300 dark:bg-slate-700 w-full animate-pulse flex items-center justify-center">
