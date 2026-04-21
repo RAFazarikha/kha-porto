@@ -20,13 +20,13 @@ export default function Hero({ dict }: HeroProps) {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href="#projects"
-            className="px-8 py-3 rounded-lg font-medium bg-blue-600 text-slate-50 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 transition-colors shadow-lg"
+            className="px-8 py-3 rounded-lg font-medium bg-blue-600 text-slate-50 hover:bg-blue-700/50 dark:bg-blue-500 dark:hover:bg-blue-600/50 transition-colors shadow-lg"
           >
             {dict.button}
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 rounded-lg font-medium border border-slate-300 dark:border-slate-600 bg-white/50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors backdrop-blur-md text-slate-800 dark:text-slate-200"
+            className="px-8 py-3 rounded-lg font-medium border border-slate-300 dark:border-slate-600 bg-slate-100/50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors backdrop-blur-md text-slate-800 dark:text-slate-200"
           >
             {dict.button2}
           </a>
