@@ -1,35 +1,31 @@
+import { Button } from "@/components/ui/button"
+
 interface HeroProps {
   dict: Record<string, string>;
 }
 
 export default function Hero({ dict }: HeroProps) {
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center min-h-[80vh] bg-[url('/light-bg.svg')] dark:bg-[url('/dark-bg.svg')] bg-cover bg-center bg-no-repeat text-slate-800 dark:text-slate-200 transition-colors">
+    <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center min-h-[80vh] transition-colors">
       
       {/* Overlay untuk memastikan teks tetap terbaca di atas gambar latar */}
-      <div className="absolute inset-0 bg-slate-50/50 dark:bg-slate-900/50 z-0 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 z-0 backdrop-blur-sm"></div>
 
       {/* Konten Utama - Tambahkan relative dan z-10 agar berada di atas overlay */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-slate-800 dark:text-slate-200 text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-          {dict.greeting}<span className="text-blue-600 dark:text-blue-400">{dict.greeting2}</span>
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+          {dict.greeting}<span className="text-primary">{dict.greeting2}</span>
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
+        <p className="mt-4 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
           {dict.description}
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href="#projects"
-            className="px-8 py-3 rounded-lg font-medium bg-blue-600 text-slate-50 hover:bg-blue-700/50 dark:bg-blue-500 dark:hover:bg-blue-600/50 transition-colors shadow-lg"
-          >
+          <Button size={"lg"} className={`px-7 py-6`}>
             {dict.button}
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 rounded-lg font-medium border border-slate-300 dark:border-slate-600 bg-slate-100/50 dark:bg-slate-800/50 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors backdrop-blur-md text-slate-800 dark:text-slate-200"
-          >
+          </Button>
+          <Button variant="secondary" size={"lg"} className={`px-7 py-6`}>
             {dict.button2}
-          </a>
+          </Button>
         </div>
       </div>
     </section>

@@ -4,6 +4,7 @@ import "../globals.css"; // (Sesuaikan path jika diperlukan)
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { TooltipProvider } from "@/components/ui/tooltip"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,16 +31,16 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <body 
         suppressHydrationWarning 
-        className={`${inter.className} bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 transition-colors duration-300`}
+        className={`${inter.className} transition-colors duration-300`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="light"
+          themes={["light", "dark", "cyberpunk", "brutalism", "vintage"]}
           disableTransitionOnChange
         >
           <Navbar />
-          {children}
+          <TooltipProvider delay={100} timeout={100}>{children}</TooltipProvider>
           <Footer />
         </ThemeProvider>
       </body>

@@ -1,9 +1,6 @@
 // app/[lang]/page.tsx
 import { getDictionary } from "@/dictionaries/getDictionary"; 
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import GithubStats from "@/components/GithubStats";
 
 export default async function Home({
   params,
@@ -21,9 +18,6 @@ export default async function Home({
   return (
     <main className="min-h-screen">
       <Hero dict={dict.home} />
-      <About dict={dict.about} />
-      <Projects dict={dict.projects} />
-      <GithubStats dict={dict.githubStats} /> 
     </main>
   );
 }

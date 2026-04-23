@@ -1,6 +1,8 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button"
+import { ButtonGroup } from "@/components/ui/button-group"
 
 export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {
   const router = useRouter();
@@ -21,14 +23,9 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
   };
 
   return (
-    <button
-      onClick={toggleLanguage}
-
-      className="px-4 py-2 bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 transition-colors rounded-lg text-sm font-semibold flex items-center gap-2"
-    >
-      <span className={currentLang === "id" ? "text-slate-900 dark:text-white" : "text-slate-500 dark:text-slate-400"}>ID</span>
-      <span className="text-slate-400 dark:text-slate-600">/</span>
-      <span className={currentLang === "en" ? "text-slate-900 dark:text-white" : "text-slate-500 dark:text-slate-400"}>EN</span>
-    </button>
+    <ButtonGroup>
+      <Button variant={currentLang === "id" ? "default" : "outline"} onClick={toggleLanguage}>ID</Button>
+      <Button variant={currentLang === "en" ? "default" : "outline"} onClick={toggleLanguage}>EN</Button>
+    </ButtonGroup>
   );
 }
