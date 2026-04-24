@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button"
+import { Dot, CodeXml } from "lucide-react";
+import Skills from "./Skills";
 
 interface HeroProps {
   dict: Record<string, string>;
@@ -6,27 +7,39 @@ interface HeroProps {
 
 export default function Hero({ dict }: HeroProps) {
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 flex items-center justify-center min-h-[80vh] transition-colors">
-      
-      {/* Overlay untuk memastikan teks tetap terbaca di atas gambar latar */}
-      <div className="absolute inset-0 z-0 backdrop-blur-sm"></div>
+    <section id="hero" className="transition-colors space-y-3 lg:space-y-5">
 
       {/* Konten Utama - Tambahkan relative dan z-10 agar berada di atas overlay */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-          {dict.greeting}<span className="text-primary">{dict.greeting2}</span>
-        </h1>
-        <p className="mt-4 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+      <div className="relative space-y-4 ml-3 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+        <div>
+          <h1 className="text-2xl md:text-3xl tracking-tight">
+            {dict.greeting}<span className="text-primary"> {dict.name}</span>
+          </h1>
+          <p className="flex flex-row">
+            <Dot /><span>{dict.address}</span>
+          </p>
+        </div>
+        <p className="text-base">
           {dict.description}
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Button size={"lg"} className={`px-7 py-6`}>
-            {dict.button}
-          </Button>
-          <Button variant="secondary" size={"lg"} className={`px-7 py-6`}>
-            {dict.button2}
-          </Button>
+        <p className="text-base">
+          {dict.description2}
+        </p>
+      </div>
+
+      <div className="relative space-y-4 ml-3 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+        <div>
+          <div className="flex flex-row gap-3">
+            <CodeXml className="size-7" />
+            <h2 className="text-lg md:text-xl tracking-tight">
+              {dict.skill}
+            </h2>
+          </div>
+          <p className="flex flex-row">
+            <Dot /><span>{dict.descSkill}</span>
+          </p>
         </div>
+        <Skills />
       </div>
     </section>
   );

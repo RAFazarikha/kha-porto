@@ -1,10 +1,12 @@
 {
     "home": {
-        "greeting": "Saya adalah seorang ",
-        "greeting2": "Full-stack Web Developer",
-        "description": "Saya adalah seorang Full-stack Web Developer yang memiliki minat besar dalam membuat aplikasi web modern, responsif, dan berkinerja tinggi menggunakan teknologi terkini.",
-        "button": "Lihat Proyek",
-        "button2": "Hubungi Saya"
+        "greeting": "Halo!",
+        "name": "Saya Rachmad Aziz Fazarikha",
+        "address": "Berdomisili di Lamongan, Jawa Timur, Indonesia",
+        "description": "Seorang Full-stack Web Developer yang bersemangat dan mahasiswa program sarjana Sistem Informasi di Universitas Trunojoyo Madura. Selama 4 tahun terakhir menjelajahi industri teknologi, saya telah mengembangkan minat yang mendalam dalam membangun aplikasi web yang dinamis, efisien, dan berpusat pada pengguna dari awal.",
+        "description2": "Fokus saya adalah menciptakan sistem aplikasi web yang dinamis, andal, dan dapat diskalakan, dengan mengubah masalah rumit menjadi solusi digital yang efisien. Menggunakan teknologi dan framework modern, saya berdedikasi untuk membangun aplikasi berkinerja tinggi yang menggabungkan desain elegan dengan fungsi yang tangguh. Tujuan utama saya adalah mewujudkan visi menjadi realitas digital yang berpusat pada pengguna, memastikan integrasi yang mulus, kemudahan pemeliharaan, serta memberikan dampak nyata di dunia industri.",
+        "skill": "Keahlian",
+        "descSkill": "Keahlian profesional saya."
     },
     "about": {
         "title": "Tentang Saya",

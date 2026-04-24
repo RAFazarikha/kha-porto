@@ -13,7 +13,7 @@ export default function About({ dict }: AboutProps) {
   ];
 
   return (
-    <section id="about" className="py-20 bg-slate-100 dark:bg-slate-800/50 transition-colors text-slate-800 dark:text-slate-200">
+    <section id="about" className="py-20 bg-muted text-muted-foreground transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold mb-8 text-center">{dict.title}</h2>
         <div className="flex flex-col md:flex-row gap-6 items-center justify-between">

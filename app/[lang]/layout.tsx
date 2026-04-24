@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css"; // (Sesuaikan path jika diperlukan)
 import { ThemeProvider } from "@/components/ThemeProvider";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+// import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/App-Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,13 +37,31 @@ export default async function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           themes={["light", "dark", "cyberpunk", "brutalism", "vintage"]}
           disableTransitionOnChange
         >
-          <Navbar />
-          <TooltipProvider delay={100} timeout={100}>{children}</TooltipProvider>
-          <Footer />
+          {/* <Navbar /> */}
+          <SidebarProvider className="mx-auto max-w-6xl items-start lg:px-4">
+            
+            <AppSidebar 
+              variant="sidebar"
+              collapsible="none"
+              className="top-0 lg:my-8 border-none shrink-0 hidden md:flex" />
+
+            <main className="flex-1 w-full lg:my-8 overflow-y-auto">
+              
+              <div className="md:hidden mb-8">
+                <SidebarTrigger />
+              </div>
+
+              <TooltipProvider delay={100} timeout={100}>
+                {children}
+              </TooltipProvider>
+
+            </main>
+          </SidebarProvider>
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

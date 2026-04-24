@@ -1,10 +1,12 @@
 {
     "home": {
-        "greeting": "I am a ",
-        "greeting2": "Full-stack Web Developer",
-        "description": "I am a Fullstack Web Developer with a passion for creating modern, responsive, and high-performance web applications using the latest technologies.",
-        "button": "View Projects",
-        "button2": "Contact Me"
+        "greeting": "Hello!",
+        "name": "I'm Rachmad Aziz Fazarikha",
+        "address": "Based in Lamongan, East Java, Indonesia",
+        "description": "A passionate Fullstack Web Developer and an undergraduate Information Systems student at Universitas Trunojoyo Madura. Over the past 4 years of exploring the technology industry, I have developed a deep interest in building dynamic, efficient, and user-centric web applications from the ground up.",
+        "description2": "My focus is on creating dynamic, reliable, and scalable web applications by transforming complex problems into efficient digital solutions. Using modern technologies and frameworks, I am dedicated to building high-performance applications that combine elegant design with robust functionality. My primary goal is to bring a user-centered digital vision to life, ensuring seamless integration, ease of maintenance, and delivering tangible impact in the industry.",
+        "skill": "Skills",
+        "descSkill": "My professional skills."
     },
     "about": {
         "title": "About Me",

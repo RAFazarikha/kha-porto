@@ -54,36 +54,30 @@ export default function Navbar() {
               <NavigationMenuList className="gap-6">
                 
                 <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()} 
-                    render={
-                      <Link href="#" className="text-sm font-medium transition-colors">
-                        {t.home}
-                      </Link>
-                    }
-                  />
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    className={navigationMenuTriggerStyle()}  
-                    render={
-                      <Link href="#" className="text-sm font-medium transition-colors">
-                        {t.about}
-                      </Link>
-                    }
-                  />
+                  <NavigationMenuLink 
+                    render={<Link href={`/${lang}`} />}
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    {t.home}
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
                   <NavigationMenuLink 
-                    className={navigationMenuTriggerStyle()} 
-                    render={
-                      <Link href="#" className="text-sm font-medium transition-colors">
-                        {t.projects}
-                      </Link>
-                    }
-                  />
+                    render={<Link href={`/${lang}/about`} />}
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    {t.about}
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuLink 
+                    render={<Link href={`/${lang}/projects`} />}
+                    className={navigationMenuTriggerStyle()}
+                  >
+                    {t.projects}
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
               </NavigationMenuList>

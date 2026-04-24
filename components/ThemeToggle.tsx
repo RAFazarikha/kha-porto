@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun, Hotel, Pencil, ScrollText } from "lucide-react";
 import { Button } from "@/components/ui/button"
@@ -9,9 +10,44 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { Skeleton } from "./ui/skeleton";
+import { useParams } from "next/navigation";
 
 export default function ThemeToggle() {
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  const params = useParams();
+  const lang = (params?.lang as "id" | "en") || "id";
+
+  const navTexts = {
+    id: { 
+      light: "Tema Terang", 
+      dark: "Tema Gelap", 
+      cyberpunk: "Tema Cyberpunk", 
+      brutalism: "Tema Brutalism", 
+      vintage: "Tema Vintage" 
+    },
+    en: { 
+      light: "Light Theme", 
+      dark: "Dark Theme", 
+      cyberpunk: "Cyberpunk Theme", 
+      brutalism: "Brutalism Theme", 
+      vintage: "Vintage Theme" 
+    },
+  };
+  const t = navTexts[lang] || navTexts.id;
+
+  useEffect(() => {
+    // eslint-disable-next-line 
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <Skeleton className="h-8 w-24" />
+    );
+  }
 
   return (
     <ButtonGroup>
@@ -21,11 +57,11 @@ export default function ThemeToggle() {
           render={
             <Button variant={theme === "light" ? "default" : "outline"} onClick={
               () => setTheme("light")
-            }><Sun /></Button>
+            } className={`group`}><Sun className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
         />
         <TooltipContent>
-          <p>Tema Terang</p>
+          <p>{t.light}</p>
         </TooltipContent>
       </Tooltip>
       
@@ -35,11 +71,11 @@ export default function ThemeToggle() {
           render={
             <Button variant={theme === "dark" ? "default" : "outline"} onClick={
               () => setTheme("dark")
-            }><Moon /></Button>
+            } className={`group`}><Moon className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
         />
         <TooltipContent>
-          <p>Tema Gelap</p>
+          <p>{t.dark}</p>
         </TooltipContent>
       </Tooltip>
 
@@ -49,11 +85,11 @@ export default function ThemeToggle() {
           render={
             <Button variant={theme === "cyberpunk" ? "default" : "outline"} onClick={
               () => setTheme("cyberpunk")
-            }><Hotel /></Button>
+            } className={`group`}><Hotel className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
         />
         <TooltipContent>
-          <p>Tema Cyberpunk</p>
+          <p>{t.cyberpunk}</p>
         </TooltipContent>
       </Tooltip>
 
@@ -63,11 +99,11 @@ export default function ThemeToggle() {
           render={
             <Button variant={theme === "brutalism" ? "default" : "outline"} onClick={
               () => setTheme("brutalism")
-            }><Pencil /></Button>
+            } className={`group`}><Pencil className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
         />
         <TooltipContent>
-          <p>Tema Brutalism</p>
+          <p>{t.brutalism}</p>
         </TooltipContent>
       </Tooltip>
       
@@ -77,11 +113,11 @@ export default function ThemeToggle() {
           render={
             <Button variant={theme === "vintage" ? "default" : "outline"} onClick={
               () => setTheme("vintage")
-            }><ScrollText /></Button>
+            } className={`group`}><ScrollText className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
         />
         <TooltipContent>
-          <p>Tema Vintage</p>
+          <p>{t.vintage}</p>
         </TooltipContent>
       </Tooltip>
     </ButtonGroup>
