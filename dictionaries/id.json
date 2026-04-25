@@ -10,13 +10,15 @@
     },
     "about": {
         "title": "Tentang Saya",
+        "subtitle": "Pengenalan singkat mengenai siapa saya.",
         "description": "Halo! Saya Rachmad Aziz Fazarikha, seorang Full-stack Web Developer yang bersemangat dan mahasiswa program sarjana Sistem Informasi di Universitas Trunojoyo Madura. Selama 4 tahun terakhir menjelajahi industri teknologi, saya telah mengembangkan minat yang mendalam dalam membangun aplikasi web yang dinamis, efisien, dan berpusat pada pengguna dari awal.",
         "description2": "Saya sangat termotivasi oleh tantangan untuk mengubah masalah yang rumit menjadi solusi digital yang efisien. Dengan memanfaatkan kerangka kerja modern, saya terus berupaya meningkatkan kualitas proyek-proyek saya dan selalu bersemangat untuk menerapkan pengetahuan saya ke dalam aplikasi dunia nyata yang berdampak dan mampu membawa perubahan.",
-        "description3": "Saya mengkhususkan diri dalam mengembangkan solusi full-stack menggunakan teknologi modern yang mencakup:",
-        "description4": "Dengan memanfaatkan ekosistem yang beragam ini, saya mengembangkan aplikasi web yang andal, aman, dan berkinerja tinggi. Fokus saya adalah menciptakan sistem yang dapat diskalakan, dengan desain yang elegan dan fungsi yang tangguh. Tujuan saya adalah mewujudkan visi menjadi realitas digital yang kokoh, dengan memastikan integrasi yang mulus dan kemudahan pemeliharaan di masa depan."
+        "titleEducation": "Pendidikan",
+        "subTitleEducation": "Riwayat pendidikan saya."
     },
     "projects": {
-        "title": "Proyek Unggulan"
+        "title": "Proyek Unggulan",
+        "subtitle": "Kumpulan proyek yang mencakup karya pribadi, akademik, serta kontribusi pada proyek open-source yang telah dikembangkan."
     },
     "githubStats": {
         "title": "Statistik GitHub",

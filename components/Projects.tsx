@@ -1,12 +1,25 @@
+"use client"
+
 import { ExternalLink, GitBranch } from "lucide-react";
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+import { buttonVariants } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { useParams } from "next/navigation";
 
 interface ProjectsProps {
   dict: Record<string, string>;
 }
 
-export default function Projects({ dict }: ProjectsProps) {
-  const projects = [
+const projects = {
+  id: [
     {
       title: "Open Data Disabilitas",
       description: "Sistem open data disabilitas yang digunakan oleh Komisi Nasional Disabilitas (KND).",
@@ -25,55 +38,98 @@ export default function Projects({ dict }: ProjectsProps) {
     },
     {
       title: "Peta Kuliner Sumenep",
-      description: "Aplikasi pencarian dan penampilan peta kuliner di Sumenep.",
+      description: "Aplikasi untuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner di Sumenep.",
       tech: ["Laravel", "Tailwind CSS", "MySQL"],
       github: "https://github.com/RAFazarikha/webgis-umkm",
       live: "https://petakulinersumenep.my.id/",
       thumbnail: "/projects/petakuliner.png"
     }
-  ];
+  ],
+  en: [
+    {
+      title: "Open Data Disabilitas",
+      description: "The open data system for people with disabilities used by the National Commission on Disabilities (KND).",
+      tech: ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
+      github: "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
+      live: "https://opendatadisabilitas.com/",
+      thumbnail: "/projects/knd.png"
+    },
+    {
+      title: "Roompi - Room Booking Platform",
+      description: "A room booking app for organizations and businesses.",
+      tech: ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
+      github: "https://github.com/RAFazarikha/peminjaman-ruangan-online",
+      live: "https://roompi-nfa.netlify.app/",
+      thumbnail: "/projects/roompi.png"
+    },
+    {
+      title: "Peta Kuliner Sumenep",
+      description: "An application for searching, mapping, and clustering culinary MSMEs in Sumenep.",
+      tech: ["Laravel", "Tailwind CSS", "MySQL"],
+      github: "https://github.com/RAFazarikha/webgis-umkm",
+      live: "https://petakulinersumenep.my.id/",
+      thumbnail: "/projects/petakuliner.png"
+    }
+  ]
+}
+
+export default function Projects({ dict }: ProjectsProps) {
+  const params = useParams();
+  const lang = (params?.lang as "id" | "en") || "id";
+
+  const currentProjectData = projects[lang];
 
   return (
-    <section id="projects" className="py-20 text-slate-800 dark:text-slate-200 bg-slate-50 dark:bg-slate-900/50 transition-colors">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold mb-12 text-center">{dict.title}</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index}
-              className="group rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:shadow-xl dark:hover:shadow-blue-900/20 transition-all duration-300 transform hover:-translate-y-1 hover:rotate-x-20 hover:rotate-y-20"
-            >
-              {/* Placeholder Thumbnail */}
-              <div className="h-48 bg-slate-300 dark:bg-slate-700 w-full animate-pulse flex items-center justify-center">
-                <Image src={project.thumbnail} alt={project.title} className="object-cover w-full h-full" width={400} height={300} />
-              </div>
-              
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-6 line-clamp-3">
+    <section id="projects" className="transition-colors space-y-3 lg:space-y-5">
+      <div className="relative space-y-4 ml-3 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+        <div>
+          <h1 className="text-2xl md:text-3xl tracking-tight text-primary">{dict.title}</h1>
+          <p className="flex flex-row">
+            {dict.subtitle}
+          </p>
+        </div>
+        <hr />
+        <div className="grid md:grid-cols-2 gap-8">
+          {currentProjectData.map((project, index) => (
+            <Card className="relative mx-auto w-full max-w-sm pt-0" key={index}>
+              <Image
+                src={project.thumbnail}
+                alt="image project"
+                width={500}
+                height={500}
+                quality={100}
+                className="relative z-20 w-full object-cover"
+              />
+              <CardHeader>
+                <CardTitle>{project.title}</CardTitle>
+                <CardDescription>
                   {project.description}
-                </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tech.map((tag) => (
-                    <span key={tag} className="text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-100 dark:bg-blue-900/30 px-2 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <a href={project.github} className="flex items-center gap-1 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                    <GitBranch className="w-4 h-4" /> Code
-                  </a>
-                  <a href={project.live} className="flex items-center gap-1 text-sm font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                    <ExternalLink className="w-4 h-4" /> Live Demo
-                  </a>
-                </div>
-              </div>
-            </div>
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex flex-wrap gap-2">
+                {project.tech.map((tech, idx) => (
+                  <Badge key={idx} variant="destructive" className="">
+                    {tech}
+                  </Badge>
+                ))}
+              </CardContent>
+              <CardFooter className="gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className={buttonVariants({ variant: "outline", size: "lg" })}
+                >
+                  <GitBranch className="w-4 h-4" /> Code
+                </a>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  className={buttonVariants({ variant: "default", size: "lg" })}
+                >
+                  <ExternalLink className="w-4 h-4" /> View
+                </a>
+              </CardFooter>
+            </Card>
           ))}
         </div>
       </div>

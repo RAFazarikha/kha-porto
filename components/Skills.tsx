@@ -71,8 +71,8 @@ export default function Skills() {
         <div className="flex flex-wrap gap-3">
           {Object.values(skills).map((skill) => (
             <Badge key={skill.name} variant="default" 
-              className="">
-                <skill.icon className="size-5" />
+              className="px-6 py-4 text-sm hover:shadow hover:scale-110 transition-all duration-200">
+                <skill.icon size={16} />
                 {skill.name}
             </Badge>
           ))}

@@ -19,6 +19,9 @@ export default function Hero({ dict }: HeroProps) {
             <Dot /><span>{dict.address}</span>
           </p>
         </div>
+
+        <hr />
+
         <p className="text-base">
           {dict.description}
         </p>
@@ -30,8 +33,8 @@ export default function Hero({ dict }: HeroProps) {
       <div className="relative space-y-4 ml-3 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
         <div>
           <div className="flex flex-row gap-3">
-            <CodeXml className="size-7" />
-            <h2 className="text-lg md:text-xl tracking-tight">
+            <CodeXml className="size-7 text-primary" />
+            <h2 className="text-lg md:text-xl tracking-tight text-primary">
               {dict.skill}
             </h2>
           </div>
@@ -39,6 +42,7 @@ export default function Hero({ dict }: HeroProps) {
             <Dot /><span>{dict.descSkill}</span>
           </p>
         </div>
+        <hr />
         <Skills />
       </div>
     </section>

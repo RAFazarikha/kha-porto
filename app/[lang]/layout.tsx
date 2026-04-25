@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/App-Sidebar";
+import TopLoader from "@/components/TopLoader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -42,20 +43,21 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           {/* <Navbar /> */}
-          <SidebarProvider className="mx-auto max-w-6xl items-start lg:px-4">
+          <SidebarProvider className="mx-auto max-w-6xl items-start lg:px-4 font-sans">
             
             <AppSidebar 
               variant="sidebar"
               collapsible="none"
               className="top-0 lg:my-8 border-none shrink-0 hidden md:flex" />
 
-            <main className="flex-1 w-full lg:my-8 overflow-y-auto">
+            <main className="flex-1 w-full lg:my-8 overflow-y-auto font-sans">
               
               <div className="md:hidden mb-8">
                 <SidebarTrigger />
               </div>
 
               <TooltipProvider delay={100} timeout={100}>
+                <TopLoader />
                 {children}
               </TooltipProvider>
 

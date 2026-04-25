@@ -61,14 +61,19 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar {...props}>
       <SidebarHeader className="pt-7 border-t border-r border-l rounded-t-lg shadow pb-5">
         <Image 
-          src="/rachmad-aziz-fazarikha-800x800.webp" 
+          src="/rachmad-aziz-fazarikha.jpeg" 
           alt="Profile"  
           width={100}
           height={100}
           className="h-28 w-28 rounded-full object-cover text-center border-2 items-center justify-center mx-auto mb-4"
         />
         <div className="flex flex-col gap-3 justify-center items-center text-center">
-          <h2 className="font-bold text-lg">Rachmad Aziz F.</h2>
+          <h2 className="font-bold text-xl tracking-tight">
+              Kha
+              <span className="text-primary">
+                Portfolio
+              </span>
+              .</h2>
           <LanguageSwitcher currentLang={lang} />
           <ThemeToggle />
         </div>
