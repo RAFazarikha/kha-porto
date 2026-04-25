@@ -30,6 +30,18 @@
             "totalFollowing": "Total Following",
             "totalFollowers": "Total Followers",
             "totalStars": "Total Stars"
+        },
+        "wakatime": {
+            "title": "Wakatime Statistics",
+            "subtitle": "Coding activities, programming languages, and projects that are used most frequently over the last 7 days.",
+            "startDate": "Start Date",
+            "endDate": "End Date",
+            "dailyAverage": "Daily Coding Time Average",
+            "totalThisWeek": "Total This Week",
+            "bestDayDate": "Best Day",
+            "allTimeTotal": "Total Coding Time Since Joining",
+            "languages": "Top Programming Languages",
+            "error": "Failed to load Wakatime data."
         }
     },
     "footer": {

@@ -34,7 +34,7 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <body 
         suppressHydrationWarning 
-        className={`${inter.className} transition-colors duration-300`}
+        className={`${inter.className} transition-colors duration-300 selection:bg-secondary`}
       >
         <ThemeProvider
           attribute="class"

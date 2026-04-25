@@ -17,7 +17,7 @@ export default async function Home({
 
   return (
     <main className="min-h-screen">
-      <Dashboard github={dict.dashboard.github} />
+      <Dashboard github={dict.dashboard.github} wakatime={dict.dashboard.wakatime} />
     </main>
   );
 }

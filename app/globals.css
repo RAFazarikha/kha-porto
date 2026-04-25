@@ -57,6 +57,22 @@
   --shadow-2xl: var(--shadow-2xl);
 }
 
+::-webkit-scrollbar-track {
+  background: var(--color-secondary); 
+  border-radius: 4px; /* Membuat ujungnya membulat */
+}
+
+/* 3. Mengatur warna bagian yang digeser (thumb) */
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary); 
+  border-radius: 4px;
+}
+
+/* 4. Mengatur warna thumb saat kursor berada di atasnya (hover) */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-foreground); 
+}
+
 html {
   scroll-behavior: smooth;
 }

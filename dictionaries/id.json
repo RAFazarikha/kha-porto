@@ -30,6 +30,18 @@
             "totalFollowing": "Total Mengikuti",
             "totalFollowers": "Total Pengikut",
             "totalStars": "Total Bintang"
+        },
+        "wakatime": {
+            "title": "Statistik Wakatime",
+            "subtitle": "Aktivitas coding, bahasa pemrograman, dan proyek yang paling sering digunakan selama 7 hari terakhir.",
+            "startDate": "Tanggal Mulai",
+            "endDate": "Tanggal Selesai",
+            "dailyAverage": "Rata-rata Waktu Coding Harian",
+            "totalThisWeek": "Total Waktu Coding Minggu Ini",
+            "bestDayDate": "Hari Terbaik",
+            "allTimeTotal": "Total Waktu Coding Sejak Bergabung",
+            "languages": "Bahasa Pemrograman Teratas",
+            "error": "Gagal memuat data Wakatime."
         }
     },
     "footer": {

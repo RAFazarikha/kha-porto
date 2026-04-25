@@ -1,3 +1,5 @@
+import { Card } from "@/components/ui/card";
+
 interface ContributionDay {
   contributionCount: number;
   date: string;
@@ -7,9 +9,9 @@ interface Week {
   contributionDays: ContributionDay[];
 }
 
-interface Repository {
-  stargazerCount: number;
-}
+// interface Repository {
+//   stargazerCount: number;
+// }
 
 interface GitProps {
   dict: Record<string, string>;
@@ -51,7 +53,7 @@ function ContributionGraph({ weeks, dict }: { weeks: Week[] } & GitProps) {
             }
 
             return (
-              <div key={weekIndex} className="w-3 relative">
+              <div key={weekIndex} className="w-3 shrink-0 relative">
                 {showMonth && (
                   <span className="absolute bottom-0 left-0 text-[10px] whitespace-nowrap">
                     {currentMonth}
@@ -64,7 +66,7 @@ function ContributionGraph({ weeks, dict }: { weeks: Week[] } & GitProps) {
         
         <div className="flex gap-1 justify-between">
           {weeks.map((week, weekIndex) => (
-            <div key={weekIndex} className="flex flex-col gap-1">
+            <div key={weekIndex} className="flex flex-col gap-1 shrink-0">
               {week.contributionDays.map((day, dayIndex) => (
                 <div
                   key={dayIndex}
@@ -127,34 +129,30 @@ export default async function GithubStats({ dict }: GitProps) {
   );
 
   return (
-    <div>
-      <div className="">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-          <div className="md:col-span-2 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border">
-              <p className="text-sm">{dict.totalFollowing}</p>
-              <p className="text-3xl text-primary">{stats.following.totalCount}</p>
-          </div>
-          <div className="md:col-span-2 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border">
-              <p className="text-sm">{dict.totalFollowers}</p>
-              <p className="text-3xl text-primary">{stats.followers.totalCount}</p>
-          </div>
-          <div className="md:col-span-2 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border">
-              <p className="text-sm">{dict.totalStars}</p>
-              <p className="text-3xl text-primary">{totalStars}</p>
-          </div>
-          <div className="md:col-span-3 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border">
-              <p className="text-sm">{dict.totalRepo}</p>
-              <p className="text-3xl text-primary">{stats.repositories.totalCount}</p>
-          </div>
-          <div className="md:col-span-3 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border">
-              <p className="text-sm">{dict.totalContrib}</p>
-              <p className="text-3xl text-primary">{stats.contributionsCollection.contributionCalendar.totalContributions}</p>
-          </div>
-          <div className="md:col-span-6 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border">
-            <ContributionGraph weeks={calendarWeeks} dict={dict} />
-          </div>
-        </div>
-      </div>
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+      <Card size="sm" className="md:col-span-2 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+          <p className="text-sm">{dict.totalFollowing}</p>
+          <p className="text-3xl text-primary font-bold">{stats.following.totalCount}</p>
+      </Card>
+      <Card size="sm" className="md:col-span-2 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+          <p className="text-sm">{dict.totalFollowers}</p>
+          <p className="text-3xl text-primary font-bold">{stats.followers.totalCount}</p>
+      </Card>
+      <Card size="sm" className="md:col-span-2 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+          <p className="text-sm">{dict.totalStars}</p>
+          <p className="text-3xl text-primary font-bold">{totalStars}</p>
+      </Card>
+      <Card size="sm" className="md:col-span-3 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+          <p className="text-sm">{dict.totalRepo}</p>
+          <p className="text-3xl text-primary font-bold">{stats.repositories.totalCount}</p>
+      </Card>
+      <Card size="sm" className="md:col-span-3 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+          <p className="text-sm">{dict.totalContrib}</p>
+          <p className="text-3xl text-primary font-bold">{stats.contributionsCollection.contributionCalendar.totalContributions}</p>
+      </Card>
+      <Card size="sm" className="md:col-span-6 p-6 rounded-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+        <ContributionGraph weeks={calendarWeeks} dict={dict} />
+      </Card>
     </div>
   );
 }

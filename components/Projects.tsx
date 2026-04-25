@@ -91,7 +91,7 @@ export default function Projects({ dict }: ProjectsProps) {
         <hr />
         <div className="grid md:grid-cols-2 gap-8">
           {currentProjectData.map((project, index) => (
-            <Card className="relative mx-auto w-full max-w-sm pt-0" key={index}>
+            <Card className="relative mx-auto w-full max-w-sm pt-0 hover:shadow transition-all duration-300 transform hover:-translate-y-1" key={index}>
               <Image
                 src={project.thumbnail}
                 alt="image project"
