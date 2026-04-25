@@ -123,15 +123,15 @@ export default function WakatimeStats({ dict }: WakaProps) {
                 <CardTitle>{dict.languages}</CardTitle>
             </CardHeader>
             <CardContent>
-                <ChartContainer config={chartConfig}>
+                <ChartContainer config={chartConfig} className="w-full h-80">
                 <BarChart
                     accessibilityLayer
                     data={data.languages}
                     layout="vertical"
-                    barCategoryGap="15%" 
+                    barCategoryGap="20%" 
                     margin={{
                         right: 40,
-                        left: 0,
+                        left: 20,
                     }}
                 >
                     <CartesianGrid horizontal={false} />
