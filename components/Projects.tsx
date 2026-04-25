@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ExternalLink, GitBranch } from "lucide-react";
 import Image from "next/image";

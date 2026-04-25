@@ -20,14 +20,17 @@
         "title": "Featured Projects",
         "subtitle": "A collection of projects including personal, academic, and open-source contributions that I have developed."
     },
-    "githubStats": {
-        "title": "GitHub Statistics",
-        "totalRepo": "Total Repositories",
-        "totalContrib": "Total Contributions (Last 1 Year)",
-        "history": "Contribution History (Last 1 Year)",
-        "totalFollowing": "Total Following",
-        "totalFollowers": "Total Followers",
-        "totalStars": "Total Stars"
+    "dashboard": {
+        "github": {
+            "title": "GitHub Statistics",
+            "subtitle": "Open-source contributions, repositories, and coding activities over the past year.",
+            "totalRepo": "Total Repositories",
+            "totalContrib": "Total Contributions (Last 1 Year)",
+            "history": "Contribution History (Last 1 Year)",
+            "totalFollowing": "Total Following",
+            "totalFollowers": "Total Followers",
+            "totalStars": "Total Stars"
+        }
     },
     "footer": {
         "text": "Designed with Next.js & Tailwind."

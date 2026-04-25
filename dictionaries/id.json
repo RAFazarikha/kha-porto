@@ -20,14 +20,17 @@
         "title": "Proyek Unggulan",
         "subtitle": "Kumpulan proyek yang mencakup karya pribadi, akademik, serta kontribusi pada proyek open-source yang telah dikembangkan."
     },
-    "githubStats": {
-        "title": "Statistik GitHub",
-        "totalRepo": "Total Repositori",
-        "totalContrib": "Total Kontribusi (1 Tahun Terakhir)",
-        "history": "Riwayat Kontribusi (1 Tahun Terakhir)",
-        "totalFollowing": "Total Mengikuti",
-        "totalFollowers": "Total Pengikut",
-        "totalStars": "Total Bintang"
+    "dashboard": {
+        "github": {
+            "title": "Statistik GitHub",
+            "subtitle": "Kontribusi open source, repositori, dan aktivitas coding selama setahun terakhir.",
+            "totalRepo": "Total Repositori",
+            "totalContrib": "Total Kontribusi (1 Tahun Terakhir)",
+            "history": "Riwayat Kontribusi (1 Tahun Terakhir)",
+            "totalFollowing": "Total Mengikuti",
+            "totalFollowers": "Total Pengikut",
+            "totalStars": "Total Bintang"
+        }
     },
     "footer": {
         "text": "Dirancang dengan Next.js & Tailwind."
