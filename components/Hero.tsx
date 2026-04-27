@@ -1,5 +1,6 @@
-import { Dot, CodeXml } from "lucide-react";
+import { CodeXml } from "lucide-react";
 import Skills from "./Skills";
+import { Separator } from "@/components/ui/separator"
 
 interface HeroProps {
   dict: Record<string, string>;
@@ -16,11 +17,11 @@ export default function Hero({ dict }: HeroProps) {
             {dict.greeting}<span className="text-primary"> {dict.name}</span>
           </h1>
           <p className="flex flex-row">
-            <Dot /><span>{dict.address}</span>
+            {dict.address}
           </p>
         </div>
 
-        <hr />
+        <Separator />
 
         <p className="text-base">
           {dict.description}
@@ -39,10 +40,10 @@ export default function Hero({ dict }: HeroProps) {
             </h2>
           </div>
           <p className="flex flex-row">
-            <Dot /><span>{dict.descSkill}</span>
+            {dict.descSkill}
           </p>
         </div>
-        <hr />
+        <Separator />
         <Skills />
       </div>
     </section>

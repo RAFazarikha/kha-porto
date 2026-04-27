@@ -1,6 +1,7 @@
 import GithubStats from "@/components/GithubStats";
 import WakatimeStats from "@/components/WakatimeStats";
 import { SiGithub, SiWakatime } from "react-icons/si";
+import { Separator } from "@/components/ui/separator"
 
 interface DashboardProps {
   github: Record<string, string>;
@@ -19,7 +20,7 @@ export default function Dashboard({ github, wakatime }: DashboardProps) {
           </p>
         </div>
 
-        <hr />
+        <Separator />
 
         <GithubStats dict={github}/>
       </div>
@@ -34,7 +35,7 @@ export default function Dashboard({ github, wakatime }: DashboardProps) {
           </p>
         </div>
 
-        <hr />
+        <Separator />
 
         <WakatimeStats dict={wakatime}/>
       </div>

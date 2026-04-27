@@ -89,11 +89,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenu>
                 {item.items.map((subItem) => (
                   <SidebarMenuItem key={subItem.title} className="group">
-                    <SidebarMenuButton isActive={pathname === subItem.url} 
+                    <SidebarMenuButton isActive={pathname === subItem.url}
                       render={
                         <Link href={subItem.url}>
-                          {subItem.icon && <subItem.icon className="size-5! group-hover:-rotate-25 transition-transform duration-200" />}
-                          <span className="text-base">{subItem.title}</span>
+                          {subItem.icon && <subItem.icon className="size-5! group-hover:-rotate-25 transition-transform duration-200 group-hover:scale-110" />}
+                          <span className="text-base transition-transform duration-200 group-hover:scale-110 group-hover:translate-x-2">{subItem.title}</span>
                         </Link>
                       }
                     >

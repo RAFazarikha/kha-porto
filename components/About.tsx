@@ -1,5 +1,6 @@
-import { Dot, GraduationCap } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import Educations from "@/components/Educations";
+import { Separator } from "@/components/ui/separator"
 
 interface AboutProps {
   dict: Record<string, string>;
@@ -13,11 +14,11 @@ export default function About({ dict }: AboutProps) {
         <div>
           <h1 className="text-2xl md:text-3xl tracking-tight text-primary">{dict.title}</h1>
           <p className="flex flex-row">
-            <Dot /><span>{dict.subtitle}</span>
+            {dict.subtitle}
           </p>
         </div>
 
-        <hr />
+        <Separator />
 
         <p className="text-base leading-relaxed text-justify">
           {dict.description}
@@ -34,11 +35,11 @@ export default function About({ dict }: AboutProps) {
             <GraduationCap size={30} /><span>{dict.titleEducation}</span>
           </h2>
           <p className="flex flex-row">
-            <Dot /><span>{dict.subTitleEducation}</span>
+            {dict.subTitleEducation}
           </p>
         </div>
 
-        <hr />
+        <Separator />
 
         <Educations />
       </div>

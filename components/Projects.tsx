@@ -13,6 +13,7 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useParams } from "next/navigation";
+import { Separator } from "@/components/ui/separator"
 
 interface ProjectsProps {
   dict: Record<string, string>;
@@ -88,7 +89,7 @@ export default function Projects({ dict }: ProjectsProps) {
             {dict.subtitle}
           </p>
         </div>
-        <hr />
+        <Separator />
         <div className="grid md:grid-cols-2 gap-8">
           {currentProjectData.map((project, index) => (
             <Card className="relative mx-auto w-full max-w-sm pt-0 hover:shadow transition-all duration-300 transform hover:-translate-y-1" key={index}>
