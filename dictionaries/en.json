@@ -44,7 +44,23 @@
             "error": "Failed to load Wakatime data."
         }
     },
-    "footer": {
-        "text": "Designed with Next.js & Tailwind."
+    "contact": {
+        "title": "Contact",
+        "subtitle": "Reach out and let's connect.",
+        "email": "Contact me via email",
+        "subTitleEmail": "Have an idea for a project collaboration, a career opportunity, or just want to say hi? My inbox is always open.",
+        "ctaEmail": "Send an Email",
+        "instagram": "Follow me on Instagram",
+        "subTitleInstagram": "Discover my creative side and daily stories outside my coding routine.",
+        "ctaInstagram": "Visit Instagram",
+        "linkedin": "Let's connect on LinkedIn",
+        "subTitleLinkedin": "Let's expand our professional network and share insights about the tech world and web development.",
+        "ctaLinkedin": "Visit LinkedIn",
+        "tiktok": "Follow me on TikTok",
+        "subTitleTiktok": "Watch a variety of short, educational, casual, and entertaining videos from me.",
+        "ctaTiktok": "Visit TikTok",
+        "github": "Check out my GitHub profile",
+        "subTitleGithub": "Explore my codebases, tech experiments, and the various open-source projects I'm working on.",
+        "ctaGithub": "Visit GitHub"
     }
 }

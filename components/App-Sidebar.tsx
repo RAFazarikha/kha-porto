@@ -17,7 +17,7 @@ import {
 import Image from "next/image"
 import ThemeToggle from "./ThemeToggle"
 import LanguageSwitcher from "./LanguageSwitcher"
-import { Folders, House, LayoutDashboard, User } from "lucide-react";
+import { Contact, Folders, House, LayoutDashboard, User } from "lucide-react";
 import Link from "next/link";
 
 const navigationData = {
@@ -30,6 +30,7 @@ const navigationData = {
           { title: "Tentang", icon:User, url: "/id/about" }, // Sesuaikan URL dengan routing kamu
           { title: "Proyek", icon:Folders, url: "/id/projects" },
           { title: "Dasbor", icon:LayoutDashboard, url: "/id/dashboard" },
+          { title: "Kontak", icon:Contact, url: "/id/contact" },
         ],
       },
     ],
@@ -44,6 +45,7 @@ const navigationData = {
           { title: "About", icon:User, url: "/en/about" },
           { title: "Projects", icon:Folders, url: "/en/projects" },
           { title: "Dashboard", icon:LayoutDashboard, url: "/en/dashboard" },
+          { title: "Contact", icon:Contact, url: "/en/contact" },
         ],
       },
     ],

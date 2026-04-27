@@ -44,7 +44,23 @@
             "error": "Gagal memuat data Wakatime."
         }
     },
-    "footer": {
-        "text": "Dirancang dengan Next.js & Tailwind."
+    "contact": {
+        "title": "Kontak",
+        "subtitle": "Hubungi saya untuk saling terhubung.",
+        "email": "Hubungi saya melalui email",
+        "subTitleEmail": "Punya ide kolaborasi proyek, peluang karier, atau sekadar ingin bertukar sapa? Kotak masuk saya selalu terbuka untuk Anda.",
+        "ctaEmail": "Pergi ke Email",
+        "instagram": "Ikuti saya di Instagram",
+        "subTitleInstagram": "Temukan sisi kreatif dan cerita keseharian saya di luar rutinitas menulis kode.",
+        "ctaInstagram": "Pergi ke Instagram",
+        "linkedin": "Mari terhubung di LinkedIn",
+        "subTitleLinkedin": "Mari perluas jaringan profesional dan saling berbagi wawasan seputar dunia teknologi dan pengembangan web.",
+        "ctaLinkedin": "Pergi ke LinkedIn",
+        "tiktok": "Ikuti saya di TikTok",
+        "subTitleTiktok": "Tonton ragam konten video singkat yang edukatif, kasual, dan menghibur dari saya.",
+        "ctaTiktok": "Pergi ke TikTok",
+        "github": "Lihat profil GitHub saya",
+        "subTitleGithub": "Jelajahi barisan kode, eksperimen teknologi, dan berbagai proyek sumber terbuka yang sedang saya kerjakan.",
+        "ctaGithub": "Pergi ke GitHub"
     }
 }
