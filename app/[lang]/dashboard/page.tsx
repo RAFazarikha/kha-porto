@@ -2,6 +2,12 @@
 import { getDictionary } from "@/dictionaries/getDictionary"; 
 import Dashboard from "@/components/Dashboard";
 
+export const metadata = {
+  title: "Dashboard",
+  description:
+    "Portfolio Fullstack Web Developer dari Indonesia yang berpengalaman dalam Next.js, React, Laravel dan framework modern lainnya.",
+};
+
 export default async function Home({
   params,
 }: {

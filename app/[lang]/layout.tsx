@@ -9,12 +9,41 @@ import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/App-Sidebar";
 import TopLoader from "@/components/TopLoader";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Portofolio Profesional",
-  description: "Portofolio developer yang dibangun dengan Next.js dan Tailwind CSS",
+  metadataBase: new URL("https://rachmadazizfazarikha.my.id"),
+  title: {
+    default: "Rachmad Aziz Fazarikha - Fullstack Web Developer",
+    template: "%s | Rachmad Aziz Fazarikha",
+  },
+  description:
+    "Fullstack Web Developer dari Indonesia yang berfokus pada pengembangan aplikasi web modern menggunakan Next.js, React, Laravel, dan framework modern lainnya.",
+  keywords: [
+    "Fullstack Developer Indonesia",
+    "Web Developer Next.js",
+    "React Developer",
+    "Jasa Pembuatan Website",
+    "Laravel Developer",
+  ],
+  authors: [{ name: "Rachmad Aziz Fazarikha" }],
+  creator: "Rachmad Aziz Fazarikha",
+
+  openGraph: {
+    title: "Rachmad Aziz Fazarikha - Fullstack Developer",
+    description:
+      "Portfolio Fullstack Web Developer dengan pengalaman membangun aplikasi web modern.",
+    url: "https://namadomainmu.com",
+    siteName: "Rachmad Aziz Fazarikha Portfolio",
+    locale: "id_ID",
+    type: "website",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
+const inter = Inter({ subsets: ["latin"] });
 
 // 1. Tambahkan kata 'async' di sini
 export default async function RootLayout({
@@ -65,6 +94,23 @@ export default async function RootLayout({
           </SidebarProvider>
           {/* <Footer /> */}
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Rachmad Aziz Fazarikha",
+              url: "https://rachmadazizfazarikha.my.id",
+              jobTitle: "Fullstack Web Developer",
+              sameAs: [
+                "https://github.com/RAFazarikha",
+                "https://www.linkedin.com/in/rachmad-aziz-fazarikha/",
+                "https://www.instagram.com/fzrkha",
+              ],
+            }),
+          }}
+        />
       </body>
     </html>
   );

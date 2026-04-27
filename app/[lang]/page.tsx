@@ -2,6 +2,12 @@
 import { getDictionary } from "@/dictionaries/getDictionary"; 
 import Hero from "@/components/Hero";
 
+export const metadata = {
+  title: "Home",
+  description:
+    "Portfolio Fullstack Web Developer dari Indonesia yang berpengalaman dalam Next.js, React, Laravel dan framework modern lainnya.",
+};
+
 export default async function Home({
   params,
 }: {
