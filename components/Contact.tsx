@@ -12,8 +12,8 @@ interface ContactProps {
 export default function Contact({ dict }: ContactProps) {
 
   return (
-    <section id="about" className="transition-colors space-y-3 lg:space-y-5">
-      <div className="relative space-y-4 ml-3 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+    <section id="about" className="transition-colors space-y-3 lg:space-y-5 mb-5">
+      <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
         <div>
           <h1 className="text-2xl md:text-3xl tracking-tight text-primary">{dict.title}</h1>
           <p className="flex flex-row">
@@ -47,7 +47,7 @@ export default function Contact({ dict }: ContactProps) {
                     </a>
                 </CardFooter>
             </Card>
-            <Card className="py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.instagram}
@@ -57,7 +57,7 @@ export default function Contact({ dict }: ContactProps) {
                     <p className="w-1/2">
                         {dict.subTitleInstagram}
                     </p>
-                    <FaInstagram className="size-18 text-primary" />
+                    <FaInstagram className="size-18 md:size-24 lg:size-18 text-primary" />
                 </CardContent>
                 <CardFooter className="">
                     <a
@@ -70,7 +70,7 @@ export default function Contact({ dict }: ContactProps) {
                     </a>
                 </CardFooter>
             </Card>
-            <Card className="py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.linkedin}
@@ -80,7 +80,7 @@ export default function Contact({ dict }: ContactProps) {
                     <p className="w-1/2">
                         {dict.subTitleLinkedin}
                     </p>
-                    <FaLinkedin className="size-18 text-primary" />
+                    <FaLinkedin className="size-18 md:size-24 lg:size-18 text-primary" />
                 </CardContent>
                 <CardFooter className="">
                     <a
@@ -93,7 +93,7 @@ export default function Contact({ dict }: ContactProps) {
                     </a>
                 </CardFooter>
             </Card>
-            <Card className="py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.tiktok}
@@ -103,7 +103,7 @@ export default function Contact({ dict }: ContactProps) {
                     <p className="w-1/2">
                         {dict.subTitleTiktok}
                     </p>
-                    <FaTiktok className="size-18 text-primary" />
+                    <FaTiktok className="size-18 md:size-24 lg:size-18 text-primary" />
                 </CardContent>
                 <CardFooter className="">
                     <a
@@ -116,7 +116,7 @@ export default function Contact({ dict }: ContactProps) {
                     </a>
                 </CardFooter>
             </Card>
-            <Card className="py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.github}
@@ -126,7 +126,7 @@ export default function Contact({ dict }: ContactProps) {
                     <p className="w-1/2">
                         {dict.subTitleGithub}
                     </p>
-                    <FaGithub className="size-18 text-primary" />
+                    <FaGithub className="size-18 md:size-24 lg:size-18 text-primary" />
                 </CardContent>
                 <CardFooter className="">
                     <a

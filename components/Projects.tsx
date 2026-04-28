@@ -81,8 +81,8 @@ export default function Projects({ dict }: ProjectsProps) {
   const currentProjectData = projects[lang];
 
   return (
-    <section id="projects" className="transition-colors space-y-3 lg:space-y-5">
-      <div className="relative space-y-4 ml-3 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+    <section id="projects" className="transition-colors space-y-3 lg:space-y-5 mb-5">
+      <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
         <div>
           <h1 className="text-2xl md:text-3xl tracking-tight text-primary">{dict.title}</h1>
           <p className="flex flex-row">

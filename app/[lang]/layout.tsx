@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 // import Navbar from "@/components/Navbar";
 // import Footer from "@/components/Footer";
 import { TooltipProvider } from "@/components/ui/tooltip"
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/App-Sidebar";
 import TopLoader from "@/components/TopLoader";
 
@@ -63,7 +63,7 @@ export default async function RootLayout({
     <html lang={lang} suppressHydrationWarning>
       <body 
         suppressHydrationWarning 
-        className={`${inter.className} transition-colors duration-300 selection:bg-secondary`}
+        className={`${inter.className} transition-colors duration-300 selection:bg-secondary md:p-4 lg:p-0`}
       >
         <ThemeProvider
           attribute="class"
@@ -77,13 +77,21 @@ export default async function RootLayout({
             <AppSidebar 
               variant="sidebar"
               collapsible="none"
-              className="top-0 lg:my-8 border-none shrink-0 hidden md:flex" />
+              className="top-0 lg:my-8 border-none shrink-0" />
 
             <main className="flex-1 w-full lg:my-8 overflow-y-auto font-sans">
-              
-              <div className="md:hidden mb-8">
-                <SidebarTrigger />
-              </div>
+
+              <SidebarInset className="md:hidden flex justify-end p-4 mb-4">
+                <header className="flex shrink-0 justify-between border-b items-center">
+                  <h2 className="font-bold text-xl tracking-tight py-auto">
+                  Kha
+                  <span className="text-primary">
+                    Portfolio
+                  </span>
+                  .</h2>
+                  <SidebarTrigger />
+                </header>
+              </SidebarInset>
 
               <TooltipProvider delay={100} timeout={100}>
                 <TopLoader />
