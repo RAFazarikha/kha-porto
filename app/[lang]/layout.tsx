@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css"; // (Sesuaikan path jika diperlukan)
 import { ThemeProvider } from "@/components/ThemeProvider";
-// import Navbar from "@/components/Navbar";
-// import Footer from "@/components/Footer";
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/App-Sidebar";
 import TopLoader from "@/components/TopLoader";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rachmadazizfazarikha.my.id"),
@@ -61,6 +60,11 @@ export default async function RootLayout({
   return (
     // 4. Gunakan variabel 'lang' yang sudah di-await
     <html lang={lang} suppressHydrationWarning>
+      <head>
+        <Script
+          defer src="https://cloud.umami.is/script.js" data-website-id="3dc7691f-9820-4587-b31e-21a49fa67275"
+        />
+      </head>
       <body 
         suppressHydrationWarning 
         className={`${inter.className} transition-colors duration-300 selection:bg-secondary md:p-4 lg:p-0`}
