@@ -1,6 +1,6 @@
 "use client";
 
-import { ExternalLink, GitBranch } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import {
   Card,
@@ -14,65 +14,14 @@ import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useParams } from "next/navigation";
 import { Separator } from "@/components/ui/separator"
+import ButtonDetail from "@/components/ButtonDetail";
+import { getProjects } from "@/project_data/getProjects";
 
 interface ProjectsProps {
   dict: Record<string, string>;
 }
 
-const projects = {
-  id: [
-    {
-      title: "Open Data Disabilitas",
-      description: "Sistem open data disabilitas yang digunakan oleh Komisi Nasional Disabilitas (KND).",
-      tech: ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
-      github: "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
-      live: "https://opendatadisabilitas.com/",
-      thumbnail: "/projects/knd.png"
-    },
-    {
-      title: "Roompi - Room Booking Platform",
-      description: "Aplikasi booking ruangan untuk kebutuhan organisasi ataupun perusahaan.",
-      tech: ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
-      github: "https://github.com/RAFazarikha/peminjaman-ruangan-online",
-      live: "https://roompi-nfa.netlify.app/",
-      thumbnail: "/projects/roompi.png"
-    },
-    {
-      title: "Peta Kuliner Sumenep",
-      description: "Aplikasi untuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner di Sumenep.",
-      tech: ["Laravel", "Tailwind CSS", "MySQL"],
-      github: "https://github.com/RAFazarikha/webgis-umkm",
-      live: "https://petakulinersumenep.my.id/",
-      thumbnail: "/projects/petakuliner.png"
-    }
-  ],
-  en: [
-    {
-      title: "Open Data Disabilitas",
-      description: "The open data system for people with disabilities used by the National Commission on Disabilities (KND).",
-      tech: ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
-      github: "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
-      live: "https://opendatadisabilitas.com/",
-      thumbnail: "/projects/knd.png"
-    },
-    {
-      title: "Roompi - Room Booking Platform",
-      description: "A room booking app for organizations and businesses.",
-      tech: ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
-      github: "https://github.com/RAFazarikha/peminjaman-ruangan-online",
-      live: "https://roompi-nfa.netlify.app/",
-      thumbnail: "/projects/roompi.png"
-    },
-    {
-      title: "Peta Kuliner Sumenep",
-      description: "An application for searching, mapping, and clustering culinary MSMEs in Sumenep.",
-      tech: ["Laravel", "Tailwind CSS", "MySQL"],
-      github: "https://github.com/RAFazarikha/webgis-umkm",
-      live: "https://petakulinersumenep.my.id/",
-      thumbnail: "/projects/petakuliner.png"
-    }
-  ]
-}
+const projects = await getProjects();
 
 export default function Projects({ dict }: ProjectsProps) {
   const params = useParams();
@@ -115,13 +64,7 @@ export default function Projects({ dict }: ProjectsProps) {
                 ))}
               </CardContent>
               <CardFooter className="gap-3">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className={buttonVariants({ variant: "outline", size: "lg" })}
-                >
-                  <GitBranch className="w-4 h-4" /> Code
-                </a>
+                <ButtonDetail dict={currentProjectData[index]} title={dict} />
                 <a
                   href={project.live}
                   target="_blank"

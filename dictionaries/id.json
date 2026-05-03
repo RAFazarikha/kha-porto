@@ -18,7 +18,10 @@
     },
     "projects": {
         "title": "Proyek Unggulan",
-        "subtitle": "Kumpulan proyek yang mencakup karya pribadi, akademik, serta kontribusi pada proyek open-source yang telah dikembangkan."
+        "subtitle": "Kumpulan proyek yang mencakup karya pribadi, akademik, serta kontribusi pada proyek open-source yang telah dikembangkan.",
+        "overview": "Ringkasan Projek",
+        "tech": "Teknologi yang Dipakai",
+        "job": "Peran dan Tanggung Jawab"
     },
     "dashboard": {
         "github": {

@@ -1,0 +1,98 @@
+{
+  "id": [
+    {
+      "title": "Open Data Disabilitas",
+      "description": "Sistem open data disabilitas yang digunakan oleh Komisi Nasional Disabilitas (KND).",
+      "tech": ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
+      "github": "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
+      "live": "https://opendatadisabilitas.com/",
+      "thumbnail": "/projects/knd.png",
+      "overview": "Project ini merupakan project riset dari tiga dosen dan dua mahasiswa jurusan Sistem Informasi Universitas Trunodjoyo Madura pada tahun 2025. Sistem open data disabilitas ini digunakan oleh Komisi Nasional Disabilitas (KND). Saya sebagai salah satu mahasiswa yang ikut mengembangkan website open data disabilitas ini.",
+      "job": [
+        "Membangun landing page menggunakan Tailwind CSS.",
+        "Mengembangkan diagram dan peta persebaran data disabilitas menggunakan Leaflet.js.",
+        "Mengembangkan fitur pencarian dan filtering data disabilitas.",
+        "Mengembangkan fitur create, update, dan delete data disabilitas."
+      ]
+    },
+    {
+      "title": "Roompi - Room Booking Platform",
+      "description": "Aplikasi booking ruangan untuk kebutuhan organisasi ataupun perusahaan.",
+      "tech": ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
+      "github": "https://github.com/RAFazarikha/peminjaman-ruangan-online",
+      "live": "https://roompi-nfa.netlify.app/",
+      "thumbnail": "/projects/roompi.png",
+      "overview": "Project ini merupakan project akhir dari program studi independen di NF Academy yang saya ikuti. Satu tim beranggotakan lima orang mahasiswa dan masing-masing mendapatkan peran yang berbeda. Saya sebagai salah satu mahasiswa yang ikut mengembangkan aplikasi ini.",
+      "job": [
+        "Membangun frontend menggunakan React dan Tailwind CSS.",
+        "Menerapkan pemanggilan API menggunakan REST APIs dari Laravel.",
+        "Menerapkan fitur autentikasi dan booking ruangan.",
+        "Mengembangkan fitur pencarian dan filtering ruangan."
+      ]
+    },
+    {
+      "title": "Peta Kuliner Sumenep",
+      "description": "Aplikasi untuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner di Sumenep.",
+      "tech": ["Laravel", "Tailwind CSS", "MySQL"],
+      "github": "https://github.com/RAFazarikha/webgis-umkm",
+      "live": "https://petakulinersumenep.my.id/",
+      "thumbnail": "/projects/petakuliner.png",
+      "overview": "Project ini saya kembangkan untuk memenuhi tugas akhir saya dalam studi S1 Sistem Informasi di Universitas Trunodjoyo Madura. Saya mengembangkan aplikasi ini dengan tujuan untuk meningkatkan visibilitas, pengelompokkan, dan promosi UMKM Kuliner yang ada di Kabupaten Sumenep.",
+      "job": [
+        "Membangun aplikasi menggunakan Laravel dan Tailwind CSS.",
+        "Menerapkan Laravel Breeze untuk autentikasi.",
+        "Membangun microservice untuk menjalankan clustering dengan menggunakan Flask.",
+        "Membuat tampilan untuk visualisasi peta menggunakan Leaflet.js.",
+        "Merancang seluruh fitur aplikasi, termasuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner."
+      ]
+    }
+  ],
+  "en": [
+    {
+      "title": "Open Data Disabilitas",
+      "description": "The open data system for people with disabilities used by the National Commission on Disabilities (KND).",
+      "tech": ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
+      "github": "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
+      "live": "https://opendatadisabilitas.com/",
+      "thumbnail": "/projects/knd.png",
+      "overview": "This project is a research initiative by three faculty members and two students from the Information Systems Department at Trunodjoyo University of Madura in 2025. This open data system for people with disabilities is used by the National Commission on Disabilities (KND). I was one of the students who helped develop this open data website for people with disabilities.",
+      "job": [
+        "Building a landing page using Tailwind CSS.",
+        "Developing diagrams and maps showing the distribution of disability data using Leaflet.js.",
+        "Developing search and filtering features for disability data.",
+        "Developing features to create, update, and delete disability data."
+      ]
+    },
+    {
+      "title": "Roompi - Room Booking Platform",
+      "description": "A room booking app for organizations and businesses.",
+      "tech": ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
+      "github": "https://github.com/RAFazarikha/peminjaman-ruangan-online",
+      "live": "https://roompi-nfa.netlify.app/",
+      "thumbnail": "/projects/roompi.png",
+      "overview": "This project was the final project for the independent study program at NF Academy that I participated in. The team consisted of five students, each of whom was assigned a different role. I was one of the students who helped develop this application.",
+      "job": [
+        "Building the frontend using React and Tailwind CSS.",
+        "Implementing API calls using Laravel's REST APIs.",
+        "Implementing authentication and room booking features.",
+        "Developing room search and filtering features."
+      ]
+    },
+    {
+      "title": "Peta Kuliner Sumenep",
+      "description": "An application for searching, mapping, and clustering culinary MSMEs in Sumenep.",
+      "tech": ["Laravel", "Tailwind CSS", "MySQL"],
+      "github": "https://github.com/RAFazarikha/webgis-umkm",
+      "live": "https://petakulinersumenep.my.id/",
+      "thumbnail": "/projects/petakuliner.png",
+      "overview": "I developed this project as part of my final thesis for my Bachelor’s degree in Information Systems at Trunodjoyo University in Madura. I created this application with the aim of increasing the visibility, organization, and promotion of culinary SMEs in Sumenep Regency.",
+      "job": [
+        "Building an application using Laravel and Tailwind CSS.",
+        "Implementing Laravel Breeze for authentication.",
+        "Building a microservice to perform clustering using Flask.",
+        "Creating a map visualization interface using Leaflet.js.",
+        "Designing all application features, including search, map visualization, and grouping of culinary SMEs."
+      ]
+    }
+  ]
+}

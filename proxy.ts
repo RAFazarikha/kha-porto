@@ -3,9 +3,9 @@ import type { NextRequest } from "next/server";
 
 const PUBLIC_FILE = /\.(.*)$/;
 const locales = ["en", "id"];
-const defaultLocale = "id"; // bisa diubah
+const defaultLocale = "en"; // bisa diubah
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip untuk file statis / API

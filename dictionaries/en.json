@@ -18,7 +18,10 @@
     },
     "projects": {
         "title": "Featured Projects",
-        "subtitle": "A collection of projects including personal, academic, and open-source contributions that I have developed."
+        "subtitle": "A collection of projects including personal, academic, and open-source contributions that I have developed.",
+        "overview": "Overview Project",
+        "tech": "Technology Used",
+        "job": "Roles and Responsibilities"
     },
     "dashboard": {
         "github": {
