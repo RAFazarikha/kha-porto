@@ -128,7 +128,7 @@ export default function WakatimeStats({ dict }: WakaProps) {
                     accessibilityLayer
                     data={data.languages}
                     layout="vertical"
-                    barCategoryGap="20%" 
+                    barCategoryGap="20%"
                     margin={{
                         right: 40,
                         left: 20,
@@ -148,7 +148,7 @@ export default function WakatimeStats({ dict }: WakaProps) {
                         cursor={false}
                         content={<ChartTooltipContent indicator="line" />}
                     />
-                    
+
                     <Bar dataKey="percent" fill="var(--chart-1)">
                         <LabelList
                             dataKey="percent"
@@ -156,8 +156,8 @@ export default function WakatimeStats({ dict }: WakaProps) {
                             offset={8}
                             className="fill-foreground font-medium"
                             fontSize={12}
-                            textAnchor='start' 
-                            formatter={(value) => `${value}%`} 
+                            textAnchor='start'
+                            formatter={(value) => `${value}%`}
                         />
                     </Bar>
                 </BarChart>

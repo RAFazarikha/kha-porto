@@ -1,0 +1,42 @@
+name: Deploy to VM
+
+on:
+  push:
+    branches:
+      - main # Trigger saat ada push ke branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Virtual Machine
+        uses: appleboy/ssh-action@v1.0.3
+        # Gunakan 'envs' untuk mengoper secret GitHub ke dalam script SSH
+        env:
+          APP_URL: ${{ secrets.ENV_NEXT_PUBLIC_APP_URL }}
+          GH_TOKEN: ${{ secrets.ENV_GITHUB_ACCESS_TOKEN }}
+          WAKA_KEY: ${{ secrets.ENV_WAKATIME_API_KEY }}
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USERNAME }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          port: ${{ secrets.VM_PORT }}
+          envs: APP_URL,GH_TOKEN,WAKA_KEY
+          script: |
+            cd ${{ secrets.PROJECT_PATH }}
+            git pull origin main
+
+            # 1. Buat file .env secara dinamis di dalam VM
+            echo "NEXT_PUBLIC_APP_URL=$APP_URL" > .env
+            echo "GITHUB_ACCESS_TOKEN=$GH_TOKEN" >> .env
+            echo "WAKATIME_API_KEY=$WAKA_KEY" >> .env
+
+            # 2. Export variabel public agar terbaca oleh docker compose build
+            export NEXT_PUBLIC_APP_URL=$APP_URL
+
+            # 3. Build dan restart
+            docker compose up -d --build
+
+            # 4. Bersihkan sisa image
+            docker image prune -f
