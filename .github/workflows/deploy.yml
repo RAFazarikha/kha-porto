@@ -23,6 +23,7 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           port: ${{ secrets.VM_PORT }}
           script_stop: true
+          command_timeout: 30m
           envs: APP_URL,GH_TOKEN,WAKA_KEY
           script: |
             cd ${{ secrets.PROJECT_PATH }}
