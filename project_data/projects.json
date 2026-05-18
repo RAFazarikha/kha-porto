@@ -1,6 +1,38 @@
 {
   "id": [
     {
+      "title": "KWT Dorang Cinta",
+      "description": "Aplikasi untuk mendukung kegiatan promosi dan pengelolaan di KWT Dorang Cinta, Surabaya.",
+      "tech": ["Next.js", "Tailwind CSS", "Shadcn UI", "Supabase"],
+      "github": "https://github.com/RAFazarikha/kwt-dorang-cinta",
+      "live": "https://kwt-dorang-cinta.vercel.app/",
+      "thumbnail": "/projects/kwt.png",
+      "overview": "Project ini saya kembangkan untuk mendukung kegiatan promosi dan pengelolaan di KWT Dorang Cinta, Surabaya. Aplikasi ini memiliki fitur untuk menampilkan informasi tentang KWT Dorang Cinta, termasuk produk-produk yang mereka hasilkan, kegiatan yang mereka lakukan, dan cara untuk menghubungi mereka. Aplikasi ini juga memiliki fitur untuk memudahkan pengelolaan data produk dan kegiatan KWT Dorang Cinta.",
+      "job": [
+        "Membangun aplikasi menggunakan Next.js dan Tailwind CSS.",
+        "Menerapkan Shadcn UI untuk komponen UI.",
+        "Membangun dashboard admin untuk pengelolaan data produk dan kegiatan menggunakan Supabase.",
+        "Membuat fitur absensi anggota KWT Dorang Cinta.",
+        "Membuat fitur untuk memudahkan pengelolaan data produk, transaksi, dan kegiatan KWT Dorang Cinta."
+      ]
+    },
+    {
+      "title": "Peta Kuliner Sumenep",
+      "description": "Aplikasi untuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner di Sumenep.",
+      "tech": ["Laravel", "Tailwind CSS", "MySQL"],
+      "github": "https://github.com/RAFazarikha/webgis-umkm",
+      "live": "https://petakulinersumenep.my.id/",
+      "thumbnail": "/projects/petakuliner.png",
+      "overview": "Project ini saya kembangkan untuk memenuhi tugas akhir saya dalam studi S1 Sistem Informasi di Universitas Trunodjoyo Madura. Saya mengembangkan aplikasi ini dengan tujuan untuk meningkatkan visibilitas, pengelompokkan, dan promosi UMKM Kuliner yang ada di Kabupaten Sumenep.",
+      "job": [
+        "Membangun aplikasi menggunakan Laravel dan Tailwind CSS.",
+        "Menerapkan Laravel Breeze untuk autentikasi.",
+        "Membangun microservice untuk menjalankan clustering dengan menggunakan Flask.",
+        "Membuat tampilan untuk visualisasi peta menggunakan Leaflet.js.",
+        "Merancang seluruh fitur aplikasi, termasuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner."
+      ]
+    },
+    {
       "title": "Open Data Disabilitas",
       "description": "Sistem open data disabilitas yang digunakan oleh Komisi Nasional Disabilitas (KND).",
       "tech": ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
@@ -29,25 +61,41 @@
         "Menerapkan fitur autentikasi dan booking ruangan.",
         "Mengembangkan fitur pencarian dan filtering ruangan."
       ]
+    }
+  ],
+  "en": [
+    {
+      "title": "KWT Dorang Cinta",
+      "description": "An app to support promotional and management activities at KWT Dorang Cinta in Surabaya.",
+      "tech": ["Next.js", "Tailwind CSS", "Shadcn UI", "Supabase"],
+      "github": "https://github.com/RAFazarikha/kwt-dorang-cinta",
+      "live": "https://kwt-dorang-cinta.vercel.app/",
+      "thumbnail": "/projects/kwt.png",
+      "overview": "I developed this project to support promotional and management activities at KWT Dorang Cinta in Surabaya. The app features information about KWT Dorang Cinta, including the products they produce, the activities they organize, and contact information. It also includes features to streamline the management of KWT Dorang Cinta’s product and activity data.",
+      "job": [
+        "Building an application using Next.js and Tailwind CSS.",
+        "Implementing Shadcn UI for UI components.",
+        "Building an admin dashboard for managing product and activity data using Supabase.",
+        "Creating a member attendance feature for KWT Dorang Cinta.",
+        "Creating features to facilitate the management of KWT Dorang Cinta’s product, transaction, and activity data."
+      ]
     },
     {
       "title": "Peta Kuliner Sumenep",
-      "description": "Aplikasi untuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner di Sumenep.",
+      "description": "An application for searching, mapping, and clustering culinary MSMEs in Sumenep.",
       "tech": ["Laravel", "Tailwind CSS", "MySQL"],
       "github": "https://github.com/RAFazarikha/webgis-umkm",
       "live": "https://petakulinersumenep.my.id/",
       "thumbnail": "/projects/petakuliner.png",
-      "overview": "Project ini saya kembangkan untuk memenuhi tugas akhir saya dalam studi S1 Sistem Informasi di Universitas Trunodjoyo Madura. Saya mengembangkan aplikasi ini dengan tujuan untuk meningkatkan visibilitas, pengelompokkan, dan promosi UMKM Kuliner yang ada di Kabupaten Sumenep.",
+      "overview": "I developed this project as part of my final thesis for my Bachelor’s degree in Information Systems at Trunodjoyo University in Madura. I created this application with the aim of increasing the visibility, organization, and promotion of culinary SMEs in Sumenep Regency.",
       "job": [
-        "Membangun aplikasi menggunakan Laravel dan Tailwind CSS.",
-        "Menerapkan Laravel Breeze untuk autentikasi.",
-        "Membangun microservice untuk menjalankan clustering dengan menggunakan Flask.",
-        "Membuat tampilan untuk visualisasi peta menggunakan Leaflet.js.",
-        "Merancang seluruh fitur aplikasi, termasuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner."
+        "Building an application using Laravel and Tailwind CSS.",
+        "Implementing Laravel Breeze for authentication.",
+        "Building a microservice to perform clustering using Flask.",
+        "Creating a map visualization interface using Leaflet.js.",
+        "Designing all application features, including search, map visualization, and grouping of culinary SMEs."
       ]
-    }
-  ],
-  "en": [
+    },
     {
       "title": "Open Data Disabilitas",
       "description": "The open data system for people with disabilities used by the National Commission on Disabilities (KND).",
@@ -76,22 +124,6 @@
         "Implementing API calls using Laravel's REST APIs.",
         "Implementing authentication and room booking features.",
         "Developing room search and filtering features."
-      ]
-    },
-    {
-      "title": "Peta Kuliner Sumenep",
-      "description": "An application for searching, mapping, and clustering culinary MSMEs in Sumenep.",
-      "tech": ["Laravel", "Tailwind CSS", "MySQL"],
-      "github": "https://github.com/RAFazarikha/webgis-umkm",
-      "live": "https://petakulinersumenep.my.id/",
-      "thumbnail": "/projects/petakuliner.png",
-      "overview": "I developed this project as part of my final thesis for my Bachelor’s degree in Information Systems at Trunodjoyo University in Madura. I created this application with the aim of increasing the visibility, organization, and promotion of culinary SMEs in Sumenep Regency.",
-      "job": [
-        "Building an application using Laravel and Tailwind CSS.",
-        "Implementing Laravel Breeze for authentication.",
-        "Building a microservice to perform clustering using Flask.",
-        "Creating a map visualization interface using Leaflet.js.",
-        "Designing all application features, including search, map visualization, and grouping of culinary SMEs."
       ]
     }
   ]

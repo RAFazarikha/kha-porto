@@ -7,6 +7,7 @@ import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "@/components/App-Sidebar";
 import TopLoader from "@/components/TopLoader";
 import Script from "next/script";
+import SplashScreen from "@/components/SplashScreen";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rachmadazizfazarikha.my.id"),
@@ -47,11 +48,11 @@ const inter = Inter({ subsets: ["latin"] });
 // 1. Tambahkan kata 'async' di sini
 export default async function RootLayout({
   children,
-  params, 
+  params,
 }: Readonly<{
   children: React.ReactNode;
   // 2. Bungkus tipe params dengan Promise
-  params: Promise<{ lang: string }>; 
+  params: Promise<{ lang: string }>;
 }>) {
   // 3. Lakukan 'await' pada params sebelum menggunakannya
   const resolvedParams = await params;
@@ -65,8 +66,8 @@ export default async function RootLayout({
           defer src="https://cloud.umami.is/script.js" data-website-id="3dc7691f-9820-4587-b31e-21a49fa67275"
         />
       </head>
-      <body 
-        suppressHydrationWarning 
+      <body
+        suppressHydrationWarning
         className={`${inter.className} transition-colors duration-300 selection:bg-secondary md:p-4 lg:p-0`}
       >
         <ThemeProvider
@@ -75,10 +76,11 @@ export default async function RootLayout({
           themes={["light", "dark", "cyberpunk", "brutalism", "vintage"]}
           disableTransitionOnChange
         >
+          <SplashScreen />
           {/* <Navbar /> */}
           <SidebarProvider className="mx-auto max-w-6xl items-start lg:px-4 font-sans">
-            
-            <AppSidebar 
+
+            <AppSidebar
               variant="sidebar"
               collapsible="none"
               className="top-0 lg:my-8 border-none shrink-0" />

@@ -54,19 +54,19 @@ const navigationData = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
-    const params = useParams();
-    const lang = (params?.lang as "id" | "en") || "id";
+  const params = useParams();
+  const lang = (params?.lang as "id" | "en") || "id";
 
-    const pathname = usePathname();
+  const pathname = usePathname();
 
-    const currentNavData = navigationData[lang];
+  const currentNavData = navigationData[lang];
 
   return (
     <Sidebar {...props}>
       <SidebarHeader className="pt-7 border-t border-r border-l rounded-t-lg shadow pb-5">
-        <Image 
-          src="/rachmad-aziz-fazarikha.jpeg" 
-          alt="Profile"  
+        <Image
+          src="/rachmad-aziz-fazarikha.jpeg"
+          alt="Profile"
           width={100}
           height={100}
           className="h-28 w-28 rounded-full object-cover text-center border-2 items-center justify-center mx-auto mb-4"
