@@ -16,6 +16,7 @@ export default function Hero({ dict }: HeroProps) {
           <h1 className="text-2xl md:text-3xl tracking-tight">
             {dict.greeting}<span className="text-primary"> {dict.name}</span>
           </h1>
+          <p className="text-sm text-primary">{dict.title} &middot; {dict.tagline}</p>
           <p className="flex flex-row">
             {dict.address}
           </p>

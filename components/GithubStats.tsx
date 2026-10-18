@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { getGithubStats } from "@/lib/github";
 
 interface ContributionDay {
   contributionCount: number;
@@ -37,7 +38,7 @@ function ContributionGraph({ weeks, dict }: { weeks: Week[] } & GitProps) {
             const firstDay = week.contributionDays[0]?.date;
             if (!firstDay) return <div key={weekIndex} className="w-3" />;
 
-            const currentMonth = new Date(firstDay).toLocaleString('id-ID', { month: 'short' });
+            const currentMonth = new Date(firstDay).toLocaleString(dict.locale, { month: 'short' });
             let showMonth = false;
 
             if (weekIndex === 0) {
@@ -45,7 +46,7 @@ function ContributionGraph({ weeks, dict }: { weeks: Week[] } & GitProps) {
             } else {
               const prevFirstDay = weeks[weekIndex - 1].contributionDays[0]?.date;
               if (prevFirstDay) {
-                const prevMonth = new Date(prevFirstDay).toLocaleString('id-ID', { month: 'short' });
+                const prevMonth = new Date(prevFirstDay).toLocaleString(dict.locale, { month: 'short' });
                 if (currentMonth !== prevMonth) {
                   showMonth = true;
                 }
@@ -81,7 +82,7 @@ function ContributionGraph({ weeks, dict }: { weeks: Week[] } & GitProps) {
         </div>
 
         <div className="mt-4 flex items-center justify-end gap-2 text-[11px]">
-          <span>Sedikit</span>
+          <span>{dict.less}</span>
           <div className="flex gap-1">
             <div className="w-3 h-3 rounded-sm bg-primary/20" />
             <div className="w-3 h-3 rounded-sm bg-primary/40" />
@@ -89,35 +90,19 @@ function ContributionGraph({ weeks, dict }: { weeks: Week[] } & GitProps) {
             <div className="w-3 h-3 rounded-sm bg-primary/80" />
             <div className="w-3 h-3 rounded-sm bg-primary" />
           </div>
-          <span>Banyak</span>
+          <span>{dict.more}</span>
         </div>
       </div>
     </div>
   );
 }
 
-// Fungsi fetch ke API route Next.js kita sendiri
-async function getGithubStats() {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000";
-  
-  // Sesuaikan path ini jika file API route kamu bukan di app/api/github/route.ts
-  const res = await fetch(`${baseUrl}/api/github`, {
-    next: { revalidate: 3600 },
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch GitHub data from API route");
-  }
-
-  return res.json();
-}
-
 export default async function GithubStats({ dict }: GitProps) {
-  const data = await getGithubStats();
+  const data = await getGithubStats().catch(() => null);
   
   // Guard clause untuk mencegah error jika data gagal dimuat atau limit API habis
   if (!data || data.error || !data.data || !data.data.user) {
-    return <div className="text-sm text-destructive">Gagal memuat data GitHub.</div>;
+    return <div className="text-sm text-destructive">{dict.error}</div>;
   }
 
   const stats = data.data.user;

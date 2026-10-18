@@ -2,26 +2,96 @@
     "home": {
         "greeting": "Halo!",
         "name": "Saya Rachmad Aziz Fazarikha",
-        "address": "Berdomisili di Lamongan, Jawa Timur, Indonesia",
-        "description": "Seorang Full-stack Web Developer yang bersemangat dan mahasiswa program sarjana Sistem Informasi di Universitas Trunojoyo Madura. Selama 4 tahun terakhir menjelajahi industri teknologi, saya telah mengembangkan minat yang mendalam dalam membangun aplikasi web yang dinamis, efisien, dan berpusat pada pengguna dari awal.",
+        "address": "Berdomisili di Surabaya, Jawa Timur, Indonesia",
+        "description": "Seorang Full-stack Web Developer dan lulusan S.Kom. Sistem Informasi Universitas Trunojoyo Madura (IPK 3,74). Saat ini magang sebagai AI Engineer di CV. Pakde Kingdom (PAK D Group) dan mengerjakan proyek freelance sebagai Full-stack Web Developer.",
         "description2": "Fokus saya adalah menciptakan sistem aplikasi web yang dinamis, andal, dan dapat diskalakan, dengan mengubah masalah rumit menjadi solusi digital yang efisien. Menggunakan teknologi dan framework modern, saya berdedikasi untuk membangun aplikasi berkinerja tinggi yang menggabungkan desain elegan dengan fungsi yang tangguh. Tujuan utama saya adalah mewujudkan visi menjadi realitas digital yang berpusat pada pengguna, memastikan integrasi yang mulus, kemudahan pemeliharaan, serta memberikan dampak nyata di dunia industri.",
         "skill": "Keahlian",
-        "descSkill": "Keahlian profesional saya."
+        "descSkill": "Keahlian profesional saya.",
+        "title": "Full-stack Web Developer",
+        "tagline": "AI Engineer"
     },
     "about": {
         "title": "Tentang Saya",
         "subtitle": "Pengenalan singkat mengenai siapa saya.",
-        "description": "Halo! Saya Rachmad Aziz Fazarikha, seorang Full-stack Web Developer yang bersemangat dan mahasiswa program sarjana Sistem Informasi di Universitas Trunojoyo Madura. Selama 4 tahun terakhir menjelajahi industri teknologi, saya telah mengembangkan minat yang mendalam dalam membangun aplikasi web yang dinamis, efisien, dan berpusat pada pengguna dari awal.",
+        "description": "Halo! Saya Rachmad Aziz Fazarikha, seorang Full-stack Web Developer dan lulusan S.Kom. Sistem Informasi Universitas Trunojoyo Madura (IPK 3,74). Saya membangun aplikasi web yang dinamis, efisien, dan berpusat pada pengguna, dan kini juga mendalami AI Engineering sebagai peserta magang di CV. Pakde Kingdom (PAK D Group), Surabaya.",
         "description2": "Saya sangat termotivasi oleh tantangan untuk mengubah masalah yang rumit menjadi solusi digital yang efisien. Dengan memanfaatkan kerangka kerja modern, saya terus berupaya meningkatkan kualitas proyek-proyek saya dan selalu bersemangat untuk menerapkan pengetahuan saya ke dalam aplikasi dunia nyata yang berdampak dan mampu membawa perubahan.",
         "titleEducation": "Pendidikan",
-        "subTitleEducation": "Riwayat pendidikan saya."
+        "subTitleEducation": "Riwayat pendidikan saya.",
+        "titleExperience": "Pengalaman",
+        "subTitleExperience": "Riwayat pekerjaan dan magang saya.",
+        "titleCert": "Sertifikat",
+        "subTitleCert": "Sertifikasi, pelatihan, dan kegiatan organisasi.",
+        "experiences": [
+            {
+                "role": "AI Engineer (Magang MagangHub)",
+                "org": "CV. Pakde Kingdom (PAK D Group)",
+                "period": "10 Agu 2026 - 9 Feb 2027",
+                "place": "Surabaya, Jawa Timur, Indonesia"
+            },
+            {
+                "role": "Full-stack Web Developer",
+                "org": "Citra Leap Solution",
+                "period": "Freelance – Sekarang"
+            }
+        ],
+        "certificates": [
+            {
+                "title": "Asisten Praktikum Pemrograman Web & Pengantar Basis Data",
+                "issuer": "Fakultas Teknik UTM (WargaLab)",
+                "year": "2026",
+                "file": "RAKHA.jpg"
+            },
+            {
+                "title": "Junior Web Developer (Pengembang Web Pratama)",
+                "issuer": "BNSP - LSP Teknologi Digital",
+                "year": "2025",
+                "file": "Rachmad Aziz Fazarikha.pdf"
+            },
+            {
+                "title": "SIB Full-stack Web Developer",
+                "issuer": "NF Academy / Kampus Merdeka",
+                "year": "2025",
+                "file": "Sertifikat Rachmad Aziz Fazarikha - SIB  Fullstack Web Developer - NF Academy.pdf"
+            },
+            {
+                "title": "Staf Divisi Informasi",
+                "issuer": "IKMALA UTM",
+                "year": "2024 - 2025",
+                "file": "Rachmad Aziz Fazarikha_page-0001.jpg"
+            },
+            {
+                "title": "Asisten Praktikum Pemrograman Visual",
+                "issuer": "Fakultas Teknik UTM (WargaLab)",
+                "year": "2024",
+                "file": "RAKA - ASPRAK PEMVIS.pdf"
+            },
+            {
+                "title": "Belajar Dasar Pemrograman Web",
+                "issuer": "Dicoding Indonesia",
+                "year": "2024",
+                "file": "dicoding_page-0001.jpg"
+            },
+            {
+                "title": "Llama DevLab ID",
+                "issuer": "Meta Indonesia x Hacktiv8",
+                "year": "2024",
+                "file": "Rachmad Aziz Fazarikha.png"
+            },
+            {
+                "title": "Study Jam x Bootcamp 2023",
+                "issuer": "GDSC Universitas Trunojoyo Madura",
+                "year": "2023",
+                "file": "RACHMAD AZIZ FAZARIKHA.pdf"
+            }
+        ]
     },
     "projects": {
         "title": "Proyek Unggulan",
         "subtitle": "Kumpulan proyek yang mencakup karya pribadi, akademik, serta kontribusi pada proyek open-source yang telah dikembangkan.",
         "overview": "Ringkasan Projek",
         "tech": "Teknologi yang Dipakai",
-        "job": "Peran dan Tanggung Jawab"
+        "job": "Peran dan Tanggung Jawab",
+        "view": "Lihat"
     },
     "dashboard": {
         "github": {
@@ -32,7 +102,11 @@
             "history": "Riwayat Kontribusi (1 Tahun Terakhir)",
             "totalFollowing": "Total Mengikuti",
             "totalFollowers": "Total Pengikut",
-            "totalStars": "Total Bintang"
+            "totalStars": "Total Bintang",
+            "locale": "id-ID",
+            "less": "Sedikit",
+            "more": "Banyak",
+            "error": "Gagal memuat data GitHub."
         },
         "wakatime": {
             "title": "Statistik Wakatime",
@@ -65,5 +139,11 @@
         "github": "Lihat profil GitHub saya",
         "subTitleGithub": "Jelajahi barisan kode, eksperimen teknologi, dan berbagai proyek sumber terbuka yang sedang saya kerjakan.",
         "ctaGithub": "Pergi ke GitHub"
+    },
+    "meta": {
+        "title": "Rachmad Aziz Fazarikha - Full-stack Web Developer",
+        "description": "Full-stack Web Developer dari Indonesia yang berfokus pada pengembangan aplikasi web modern menggunakan Next.js, React, Laravel, dan framework modern lainnya.",
+        "ogTitle": "Rachmad Aziz Fazarikha - Full-stack Developer",
+        "ogDescription": "Portfolio Full-stack Web Developer dengan pengalaman membangun aplikasi web modern."
     }
 }

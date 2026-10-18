@@ -11,7 +11,7 @@ interface DashboardProps {
 export default function Dashboard({ github, wakatime }: DashboardProps) {
 
   return (
-    <section id="about" className="transition-colors space-y-3 lg:space-y-5 mb-5">
+    <section id="dashboard" className="transition-colors space-y-3 lg:space-y-5 mb-5">
       <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
         <div>
           <h1 className="flex flex-row gap-2 text-2xl md:text-3xl tracking-tight text-primary"><SiGithub size={30} />{github.title}</h1>

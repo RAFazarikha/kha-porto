@@ -17,13 +17,13 @@ const educations = {
         title: "Pendidikan",
         educations: [
             {
-                school: "Universitas Trunodjoyo Madura",
-                degree: "Sistem Informasi",
-                year: "2022 - Sekarang",
+                school: "Universitas Trunojoyo Madura",
+                degree: "S.Kom. Sistem Informasi",
+                mark: "IPK 3,74",
+                year: "Agu 2022 - Jul 2026",
                 address: "Bangkalan, Jawa Timur, Indonesia",
                 level: "Gelar Sarjana",
-                logo: "/utm.png",
-                mark: null
+                logo: "/utm.png"
             },
             {
                 school: "MAS Ihyaul Ulum Dukun",
@@ -40,13 +40,13 @@ const educations = {
         title: "Education",
         educations: [
             {
-                school: "Universitas Trunodjoyo Madura",
-                degree: "Information Systems",
-                year: "2022 - Present",
+                school: "Universitas Trunojoyo Madura",
+                degree: "S.Kom. Information Systems",
+                mark: "GPA 3.74",
+                year: "Aug 2022 - Jul 2026",
                 address: "Bangkalan, Jawa Timur, Indonesia",
                 level: "Bachelor's Degree",
-                logo: "/utm.png",
-                mark: null
+                logo: "/utm.png"
             },
             {
                 school: "MAS Ihyaul Ulum Dukun",

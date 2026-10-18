@@ -55,7 +55,7 @@ export default function ThemeToggle() {
         <TooltipTrigger
           delay={100}
           render={
-            <Button variant={theme === "light" ? "default" : "outline"} onClick={
+            <Button aria-label={t.light} variant={theme === "light" ? "default" : "outline"} onClick={
               () => setTheme("light")
             } className={`group`}><Sun className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
@@ -69,7 +69,7 @@ export default function ThemeToggle() {
         <TooltipTrigger 
           delay={100}
           render={
-            <Button variant={theme === "dark" ? "default" : "outline"} onClick={
+            <Button aria-label={t.dark} variant={theme === "dark" ? "default" : "outline"} onClick={
               () => setTheme("dark")
             } className={`group`}><Moon className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
@@ -83,7 +83,7 @@ export default function ThemeToggle() {
         <TooltipTrigger 
           delay={100}
           render={
-            <Button variant={theme === "cyberpunk" ? "default" : "outline"} onClick={
+            <Button aria-label={t.cyberpunk} variant={theme === "cyberpunk" ? "default" : "outline"} onClick={
               () => setTheme("cyberpunk")
             } className={`group`}><Hotel className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
@@ -97,7 +97,7 @@ export default function ThemeToggle() {
         <TooltipTrigger 
           delay={100}
           render={
-            <Button variant={theme === "brutalism" ? "default" : "outline"} onClick={
+            <Button aria-label={t.brutalism} variant={theme === "brutalism" ? "default" : "outline"} onClick={
               () => setTheme("brutalism")
             } className={`group`}><Pencil className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }
@@ -111,7 +111,7 @@ export default function ThemeToggle() {
         <TooltipTrigger 
           delay={100}
           render={
-            <Button variant={theme === "vintage" ? "default" : "outline"} onClick={
+            <Button aria-label={t.vintage} variant={theme === "vintage" ? "default" : "outline"} onClick={
               () => setTheme("vintage")
             } className={`group`}><ScrollText className="group-hover:scale-120 transition-transform duration-200" /></Button>
           }

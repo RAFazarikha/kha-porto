@@ -40,6 +40,7 @@ export default function Contact({ dict }: ContactProps) {
                     <a
                         href="mailto:fazarikha923@gmail.com"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={buttonVariants({ variant: "secondary", size: "lg" })}
                     >
                         <span>{dict.ctaEmail}</span>
@@ -63,6 +64,7 @@ export default function Contact({ dict }: ContactProps) {
                     <a
                         href="https://www.instagram.com/fzrkha"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={buttonVariants({ variant: "secondary", size: "lg" })}
                     >
                         <span>{dict.ctaInstagram}</span>
@@ -86,6 +88,7 @@ export default function Contact({ dict }: ContactProps) {
                     <a
                         href="https://www.linkedin.com/in/rachmad-aziz-fazarikha/"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={buttonVariants({ variant: "secondary", size: "lg" })}
                     >
                         <span>{dict.ctaLinkedin}</span>
@@ -109,6 +112,7 @@ export default function Contact({ dict }: ContactProps) {
                     <a
                         href="https://www.tiktok.com/@fazarikha.24"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={buttonVariants({ variant: "secondary", size: "lg" })}
                     >
                         <span>{dict.ctaTiktok}</span>
@@ -132,6 +136,7 @@ export default function Contact({ dict }: ContactProps) {
                     <a
                         href="https://github.com/RAFazarikha"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={buttonVariants({ variant: "secondary", size: "lg" })}
                     >
                         <span>{dict.ctaGithub}</span>

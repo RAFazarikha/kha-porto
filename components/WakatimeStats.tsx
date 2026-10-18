@@ -19,10 +19,10 @@ import {
 const chartConfig = {
   percent: {
     label: "Persentase (%): ",
-    color: "hsl(var(--chart-1))", // Menggunakan warna primary tema kamu
+    color: "var(--chart-1)", // Menggunakan warna primary tema kamu
   },
   label: {
-    color: "hsl(var(--background))",
+    color: "var(--background)",
   },
 } satisfies ChartConfig
 

@@ -65,7 +65,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar {...props}>
       <SidebarHeader className="pt-7 border-t border-r border-l rounded-t-lg shadow pb-5">
         <Image
-          src="/rachmad-aziz-fazarikha.jpeg"
+          src="/rakha.webp"
           alt="Profile"
           width={100}
           height={100}

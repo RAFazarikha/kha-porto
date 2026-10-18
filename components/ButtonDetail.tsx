@@ -68,6 +68,7 @@ export default function ButtonDetail({ dict, title }: DetailProps) {
             <a
               href={dict.github}
               target="_blank"
+              rel="noopener noreferrer"
               className={buttonVariants({ variant: "outline", size: "lg" })}
             >
               <GitBranch className="w-4 h-4" /> Code
@@ -75,6 +76,7 @@ export default function ButtonDetail({ dict, title }: DetailProps) {
             <a
               href={dict.live}
               target="_blank"
+              rel="noopener noreferrer"
               className={buttonVariants({ variant: "default", size: "lg" })}
             >
               <ExternalLink className="w-4 h-4" /> View
@@ -102,6 +104,7 @@ export default function ButtonDetail({ dict, title }: DetailProps) {
           <a
             href={dict.live}
             target="_blank"
+            rel="noopener noreferrer"
             className={buttonVariants({ variant: "default" })}
           >
             <ExternalLink className="w-4 h-4" /> View
@@ -109,6 +112,7 @@ export default function ButtonDetail({ dict, title }: DetailProps) {
           <a
             href={dict.github}
             target="_blank"
+            rel="noopener noreferrer"
             className={buttonVariants({ variant: "outline" })}
           >
             <GitBranch className="w-4 h-4" /> Code

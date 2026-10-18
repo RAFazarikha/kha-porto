@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Rachmad Aziz Fazarikha - Fullstack Web Developer',
+    name: 'Rachmad Aziz Fazarikha - Full-stack Web Developer',
     short_name: 'Rachmad Aziz',
-    description: 'Fullstack Web Developer dari Indonesia yang berfokus pada pengembangan aplikasi web modern menggunakan Next.js, React, Laravel, dan framework modern lainnya.',
+    description: 'Full-stack Web Developer dari Indonesia yang berfokus pada pengembangan aplikasi web modern menggunakan Next.js, React, Laravel, dan framework modern lainnya.',
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

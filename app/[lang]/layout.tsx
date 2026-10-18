@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getDictionary } from "@/dictionaries/getDictionary";
 import { Inter } from "next/font/google";
 import "../globals.css"; // (Sesuaikan path jika diperlukan)
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -9,39 +11,51 @@ import TopLoader from "@/components/TopLoader";
 import Script from "next/script";
 import SplashScreen from "@/components/SplashScreen";
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://rachmadazizfazarikha.my.id"),
-  title: {
-    default: "Rachmad Aziz Fazarikha - Fullstack Web Developer",
-    template: "%s | Rachmad Aziz Fazarikha",
-  },
-  description:
-    "Fullstack Web Developer dari Indonesia yang berfokus pada pengembangan aplikasi web modern menggunakan Next.js, React, Laravel, dan framework modern lainnya.",
-  keywords: [
-    "Fullstack Developer Indonesia",
-    "Web Developer Next.js",
-    "React Developer",
-    "Jasa Pembuatan Website",
-    "Laravel Developer",
-  ],
-  authors: [{ name: "Rachmad Aziz Fazarikha" }],
-  creator: "Rachmad Aziz Fazarikha",
+const SITE_URL = "https://rachmadazizfazarikha.my.id";
+const locales = ["en", "id"] as const;
+type Locale = (typeof locales)[number];
+const isLocale = (l: string): l is Locale => (locales as readonly string[]).includes(l);
 
-  openGraph: {
-    title: "Rachmad Aziz Fazarikha - Fullstack Developer",
-    description:
-      "Portfolio Fullstack Web Developer dengan pengalaman membangun aplikasi web modern.",
-    url: "https://namadomainmu.com",
-    siteName: "Rachmad Aziz Fazarikha Portfolio",
-    locale: "id_ID",
-    type: "website",
-  },
+export function generateStaticParams() {
+  return locales.map((lang) => ({ lang }));
+}
 
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const { meta } = await getDictionary(lang);
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: meta.title,
+      template: "%s | Rachmad Aziz Fazarikha",
+    },
+    description: meta.description,
+    keywords: [
+      "Full-stack Developer Indonesia",
+      "Web Developer Next.js",
+      "React Developer",
+      "Jasa Pembuatan Website",
+      "Laravel Developer",
+    ],
+    authors: [{ name: "Rachmad Aziz Fazarikha" }],
+    creator: "Rachmad Aziz Fazarikha",
+    openGraph: {
+      title: meta.ogTitle,
+      description: meta.ogDescription,
+      url: `${SITE_URL}/${lang}`,
+      siteName: "Rachmad Aziz Fazarikha Portfolio",
+      locale: lang === "en" ? "en_US" : "id_ID",
+      type: "website",
+    },
+    robots: { index: true, follow: true },
+  };
+}
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +71,7 @@ export default async function RootLayout({
   // 3. Lakukan 'await' pada params sebelum menggunakannya
   const resolvedParams = await params;
   const lang = resolvedParams.lang;
+  if (!isLocale(lang)) notFound();
 
   return (
     // 4. Gunakan variabel 'lang' yang sudah di-await
@@ -116,7 +131,7 @@ export default async function RootLayout({
               "@type": "Person",
               name: "Rachmad Aziz Fazarikha",
               url: "https://rachmadazizfazarikha.my.id",
-              jobTitle: "Fullstack Web Developer",
+              jobTitle: "Full-stack Web Developer",
               sameAs: [
                 "https://github.com/RAFazarikha",
                 "https://www.linkedin.com/in/rachmad-aziz-fazarikha/",

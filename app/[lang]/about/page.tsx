@@ -4,8 +4,6 @@ import About from "@/components/About";
 
 export const metadata = {
   title: "About",
-  description:
-    "Portfolio Fullstack Web Developer dari Indonesia yang berpengalaman dalam Next.js, React, Laravel dan framework modern lainnya.",
 };
 
 export default async function Home({

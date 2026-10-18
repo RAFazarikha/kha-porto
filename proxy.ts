@@ -19,7 +19,7 @@ export function proxy(request: NextRequest) {
 
   // Cek apakah sudah ada locale
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}`)
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
 
   if (!pathnameHasLocale) {

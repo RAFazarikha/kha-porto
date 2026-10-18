@@ -8,8 +8,8 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
   const router = useRouter();
   const pathname = usePathname();
 
-  const toggleLanguage = () => {
-    const newLang = currentLang === "id" ? "en" : "id";
+  const switchTo = (newLang: "id" | "en") => {
+    if (newLang === currentLang) return;
     
     // CARA LEBIH AMAN: Memecah URL dan hanya mengganti bagian bahasanya saja
     // Contoh: "/id/tentang" -> ["", "id", "tentang"] -> ubah index 1 -> gabungkan lagi
@@ -24,8 +24,8 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
 
   return (
     <ButtonGroup>
-      <Button variant={currentLang === "id" ? "default" : "outline"} onClick={toggleLanguage}>ID</Button>
-      <Button variant={currentLang === "en" ? "default" : "outline"} onClick={toggleLanguage}>EN</Button>
+      <Button variant={currentLang === "id" ? "default" : "outline"} aria-pressed={currentLang === "id"} onClick={() => switchTo("id")}>ID</Button>
+      <Button variant={currentLang === "en" ? "default" : "outline"} aria-pressed={currentLang === "en"} onClick={() => switchTo("en")}>EN</Button>
     </ButtonGroup>
   );
 }

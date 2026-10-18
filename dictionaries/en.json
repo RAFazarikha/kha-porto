@@ -2,26 +2,96 @@
     "home": {
         "greeting": "Hello!",
         "name": "I'm Rachmad Aziz Fazarikha",
-        "address": "Based in Lamongan, East Java, Indonesia",
-        "description": "A passionate Fullstack Web Developer and an undergraduate Information Systems student at Universitas Trunojoyo Madura. Over the past 4 years of exploring the technology industry, I have developed a deep interest in building dynamic, efficient, and user-centric web applications from the ground up.",
+        "address": "Based in Surabaya, East Java, Indonesia",
+        "description": "A Full-stack Web Developer and graduate (S.Kom.) in Information Systems from Universitas Trunojoyo Madura (GPA 3.74). Currently an AI Engineer intern at CV. Pakde Kingdom (PAK D Group) and a freelance Full-stack Web Developer.",
         "description2": "My focus is on creating dynamic, reliable, and scalable web applications by transforming complex problems into efficient digital solutions. Using modern technologies and frameworks, I am dedicated to building high-performance applications that combine elegant design with robust functionality. My primary goal is to bring a user-centered digital vision to life, ensuring seamless integration, ease of maintenance, and delivering tangible impact in the industry.",
         "skill": "Skills",
-        "descSkill": "My professional skills."
+        "descSkill": "My professional skills.",
+        "title": "Full-stack Web Developer",
+        "tagline": "AI Engineer"
     },
     "about": {
         "title": "About Me",
         "subtitle": "A brief introduction about who I am.",
-        "description": "Hello! I am Rachmad Aziz Fazarikha, a passionate Fullstack Web Developer and an undergraduate Information Systems student at Universitas Trunojoyo Madura. Over the past 4 years of exploring the technology industry, I have developed a deep interest in building dynamic, efficient, and user-centric web applications from the ground up.",
+        "description": "Hello! I am Rachmad Aziz Fazarikha, a Full-stack Web Developer and Information Systems graduate (S.Kom.) from Universitas Trunojoyo Madura (GPA 3.74). I build dynamic, efficient, and user-centric web applications, and I am now also growing in AI engineering as an intern at CV. Pakde Kingdom (PAK D Group) in Surabaya.",
         "description2": "I am highly motivated by the challenge of turning complex problems into streamlined digital solutions. By leveraging modern frameworks, I continuously seek to enhance my projects and am always eager to implement my knowledge into impactful, real-world applications that make a difference.",
         "titleEducation": "Education",
-        "subTitleEducation": "My educational background."
+        "subTitleEducation": "My educational background.",
+        "titleExperience": "Experience",
+        "subTitleExperience": "My work and internship history.",
+        "titleCert": "Certificates",
+        "subTitleCert": "Certifications, training, and organizational activities.",
+        "experiences": [
+            {
+                "role": "AI Engineer (MagangHub Internship)",
+                "org": "CV. Pakde Kingdom (PAK D Group)",
+                "period": "10 Aug 2026 - 9 Feb 2027",
+                "place": "Surabaya, East Java, Indonesia"
+            },
+            {
+                "role": "Full-stack Web Developer",
+                "org": "Citra Leap Solution",
+                "period": "Freelance – Now"
+            }
+        ],
+        "certificates": [
+            {
+                "title": "Practicum Assistant: Web-Based Programming & Intro to Databases",
+                "issuer": "Faculty of Engineering UTM (WargaLab)",
+                "year": "2026",
+                "file": "RAKHA.jpg"
+            },
+            {
+                "title": "Junior Web Developer",
+                "issuer": "BNSP - LSP Teknologi Digital",
+                "year": "2025",
+                "file": "Rachmad Aziz Fazarikha.pdf"
+            },
+            {
+                "title": "SIB Full-stack Web Developer",
+                "issuer": "NF Academy / Kampus Merdeka",
+                "year": "2025",
+                "file": "Sertifikat Rachmad Aziz Fazarikha - SIB  Fullstack Web Developer - NF Academy.pdf"
+            },
+            {
+                "title": "Information Division Staff",
+                "issuer": "IKMALA UTM",
+                "year": "2024 - 2025",
+                "file": "Rachmad Aziz Fazarikha_page-0001.jpg"
+            },
+            {
+                "title": "Practicum Assistant: Visual Programming",
+                "issuer": "Faculty of Engineering UTM (WargaLab)",
+                "year": "2024",
+                "file": "RAKA - ASPRAK PEMVIS.pdf"
+            },
+            {
+                "title": "Web Programming Fundamentals",
+                "issuer": "Dicoding Indonesia",
+                "year": "2024",
+                "file": "dicoding_page-0001.jpg"
+            },
+            {
+                "title": "Llama DevLab ID",
+                "issuer": "Meta Indonesia x Hacktiv8",
+                "year": "2024",
+                "file": "Rachmad Aziz Fazarikha.png"
+            },
+            {
+                "title": "Study Jam x Bootcamp 2023",
+                "issuer": "GDSC Universitas Trunojoyo Madura",
+                "year": "2023",
+                "file": "RACHMAD AZIZ FAZARIKHA.pdf"
+            }
+        ]
     },
     "projects": {
         "title": "Featured Projects",
         "subtitle": "A collection of projects including personal, academic, and open-source contributions that I have developed.",
         "overview": "Overview Project",
         "tech": "Technology Used",
-        "job": "Roles and Responsibilities"
+        "job": "Roles and Responsibilities",
+        "view": "View"
     },
     "dashboard": {
         "github": {
@@ -32,7 +102,11 @@
             "history": "Contribution History (Last 1 Year)",
             "totalFollowing": "Total Following",
             "totalFollowers": "Total Followers",
-            "totalStars": "Total Stars"
+            "totalStars": "Total Stars",
+            "locale": "en-US",
+            "less": "Less",
+            "more": "More",
+            "error": "Failed to load GitHub data."
         },
         "wakatime": {
             "title": "Wakatime Statistics",
@@ -65,5 +139,11 @@
         "github": "Check out my GitHub profile",
         "subTitleGithub": "Explore my codebases, tech experiments, and the various open-source projects I'm working on.",
         "ctaGithub": "Visit GitHub"
+    },
+    "meta": {
+        "title": "Rachmad Aziz Fazarikha - Full-stack Web Developer",
+        "description": "Full-stack Web Developer from Indonesia focused on building modern web applications with Next.js, React, Laravel, and other modern frameworks.",
+        "ogTitle": "Rachmad Aziz Fazarikha - Full-stack Developer",
+        "ogDescription": "Full-stack Web Developer portfolio with experience building modern web applications."
     }
 }

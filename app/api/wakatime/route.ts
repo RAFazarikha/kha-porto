@@ -44,7 +44,7 @@ export async function GET() {
         allTimeTotal: statsAllTime.data.human_readable_total || '0 mins'
       },
       // Tetap pertahankan data languages untuk Bar Chart kamu
-      languages: stats7Days.data.languages.map((l: any) => ({
+      languages: stats7Days.data.languages.map((l: { name: string; text: string; percent: number }) => ({
         name: l.name, 
         text: l.text, 
         percent: l.percent

@@ -44,7 +44,7 @@ export default function Projects({ dict }: ProjectsProps) {
             <Card className="relative mx-auto w-full max-w-sm pt-0 hover:shadow transition-all duration-300 transform hover:-translate-y-1" key={index}>
               <Image
                 src={project.thumbnail}
-                alt="image project"
+                alt={project.title}
                 width={500}
                 height={500}
                 quality={75}
@@ -68,9 +68,10 @@ export default function Projects({ dict }: ProjectsProps) {
                 <a
                   href={project.live}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={buttonVariants({ variant: "default", size: "lg" })}
                 >
-                  <ExternalLink className="w-4 h-4" /> View
+                  <ExternalLink className="w-4 h-4" /> {dict.view}
                 </a>
               </CardFooter>
             </Card>
