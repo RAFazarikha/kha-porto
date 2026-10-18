@@ -33,11 +33,11 @@ export default function Skills() {
     return (
         <div className="flex flex-wrap gap-3">
           {skills.map((skill) => (
-            <Badge key={skill.name} variant="default" 
-              className="px-6 py-4 text-sm hover:shadow hover:scale-110 transition-all duration-200">
-                <skill.icon size={16} />
-                {skill.name}
-            </Badge>
+              <Badge key={skill.name} variant="default"
+                className="group px-6 py-4 text-sm hover:shadow hover:scale-110 transition-all duration-200">
+                  <skill.icon size={16} className="group-hover:animate-bounce motion-reduce:animate-none" />
+                  {skill.name}
+              </Badge>
           ))}
         </div>
     )

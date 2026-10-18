@@ -1,4 +1,5 @@
 import { Award, Briefcase, GraduationCap } from "lucide-react";
+import { Reveal } from "@/components/Reveal";
 import Educations from "@/components/Educations";
 import { Separator } from "@/components/ui/separator"
 
@@ -57,11 +58,13 @@ export default function About({ dict }: AboutProps) {
         </div>
         <Separator />
         <ul className="space-y-4">
-          {dict.experiences.map((e) => (
+          {dict.experiences.map((e, i) => (
             <li key={e.role}>
+            <Reveal delay={i * 0.08}>
               <p className="font-medium">{e.role}</p>
               <p className="text-sm">{e.org}</p>
               <p className="text-xs text-muted-foreground">{[e.period, e.place].filter(Boolean).join(" · ")}</p>
+            </Reveal>
             </li>
           ))}
         </ul>
@@ -76,14 +79,16 @@ export default function About({ dict }: AboutProps) {
         </div>
         <Separator />
         <ul className="space-y-4">
-          {dict.certificates.map((c) => (
-            <li key={c.title}>
+          {dict.certificates.map((c, i) => (
+            <li key={c.title} className="transition-transform duration-300 hover:-translate-y-1 hover:rotate-1 motion-reduce:transform-none">
+              <Reveal delay={i * 0.08}>
               {c.file ? (
                 <a href={`/sertifikat/${encodeURIComponent(c.file)}`} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline">{c.title}</a>
               ) : (
                 <p className="font-medium">{c.title}</p>
               )}
               <p className="text-xs text-muted-foreground">{c.issuer} · {c.year}</p>
+              </Reveal>
             </li>
           ))}
         </ul>

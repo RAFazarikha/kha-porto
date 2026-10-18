@@ -77,6 +77,7 @@ export default async function RootLayout({
     // 4. Gunakan variabel 'lang' yang sudah di-await
     <html lang={lang} suppressHydrationWarning>
       <head>
+        <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style></noscript>
         <Script
           defer src="https://cloud.umami.is/script.js" data-website-id="3dc7691f-9820-4587-b31e-21a49fa67275"
         />

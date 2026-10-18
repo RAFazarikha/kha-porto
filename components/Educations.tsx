@@ -1,6 +1,7 @@
 "use client"
 
 import { useParams } from "next/navigation";
+import { Reveal } from "@/components/Reveal"
 import Image from "next/image"
 import {
   Item,
@@ -70,8 +71,9 @@ export default function Educations() {
     return (
         <div className="flex flex-col">
             <ItemGroup className="gap-4">
-                {Object.values(currentEduData.educations).map((education) => (
-                    <Item key={education.school} variant="muted" role="listitem" render={
+                {Object.values(currentEduData.educations).map((education, i) => (
+                    <Reveal key={education.school} delay={i * 0.08} role="listitem">
+                    <Item variant="muted" render={
                     <a href="#">
                         <ItemMedia variant="image">
                             <Image
@@ -101,6 +103,7 @@ export default function Educations() {
                         </ItemContent>
                     </a>
                     } />
+                    </Reveal>
                 ))}
             </ItemGroup>
         </div>
