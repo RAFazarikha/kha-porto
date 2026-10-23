@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Card3D } from "@/components/Card3D";
 import { getGithubStats } from "@/lib/github";
 
 interface ContributionDay {
@@ -115,29 +116,29 @@ export default async function GithubStats({ dict }: GitProps) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-      <Card size="sm" className="md:col-span-2 p-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+      <Card3D className="md:col-span-2"><Card size="sm" className="p-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!">
           <p className="text-sm">{dict.totalFollowing}</p>
           <p className="text-3xl text-primary font-bold">{stats.following.totalCount}</p>
-      </Card>
-      <Card size="sm" className="md:col-span-2 p-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+      </Card></Card3D>
+      <Card3D className="md:col-span-2"><Card size="sm" className="p-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!">
           <p className="text-sm">{dict.totalFollowers}</p>
           <p className="text-3xl text-primary font-bold">{stats.followers.totalCount}</p>
-      </Card>
-      <Card size="sm" className="md:col-span-2 p-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+      </Card></Card3D>
+      <Card3D className="md:col-span-2"><Card size="sm" className="p-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!">
           <p className="text-sm">{dict.totalStars}</p>
           <p className="text-3xl text-primary font-bold">{totalStars}</p>
-      </Card>
-      <Card size="sm" className="md:col-span-3 p-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+      </Card></Card3D>
+      <Card3D className="md:col-span-3"><Card size="sm" className="p-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!">
           <p className="text-sm">{dict.totalRepo}</p>
           <p className="text-3xl text-primary font-bold">{stats.repositories.totalCount}</p>
-      </Card>
-      <Card size="sm" className="md:col-span-3 p-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+      </Card></Card3D>
+      <Card3D className="md:col-span-3"><Card size="sm" className="p-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!">
           <p className="text-sm">{dict.totalContrib}</p>
           <p className="text-3xl text-primary font-bold">{stats.contributionsCollection.contributionCalendar.totalContributions}</p>
-      </Card>
-      <Card size="sm" className="md:col-span-6 p-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!">
+      </Card></Card3D>
+      <Card3D className="md:col-span-6"><Card size="sm" className="p-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!">
         <ContributionGraph weeks={calendarWeeks} dict={dict} />
-      </Card>
+      </Card></Card3D>
     </div>
   );
 }

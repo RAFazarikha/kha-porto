@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal } from "@/components/Reveal";
+import { Card3D } from "@/components/Card3D";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import {
@@ -43,7 +44,8 @@ export default function Projects({ dict }: ProjectsProps) {
         <div className="grid md:grid-cols-2 gap-8">
           {currentProjectData.map((project, index) => (
             <Reveal key={index} delay={(index % 2) * 0.08}>
-            <Card className="relative mx-auto w-full max-w-sm pt-0 hover:shadow transition-all duration-300 transform hover:-translate-y-1 hover:rotate-1 motion-reduce:transform-none">
+            <Card3D className="relative mx-auto w-full max-w-sm">
+            <Card className="relative mx-auto w-full max-w-sm pt-0 hover:shadow transition-shadow duration-300">
               <Image
                 src={project.thumbnail}
                 alt={project.title}
@@ -77,6 +79,7 @@ export default function Projects({ dict }: ProjectsProps) {
                 </a>
               </CardFooter>
             </Card>
+            </Card3D>
             </Reveal>
           ))}
         </div>

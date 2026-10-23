@@ -1,3 +1,4 @@
+import { Card3D } from "@/components/Card3D";
 import { Separator } from "@/components/ui/separator"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { SiGmail } from "react-icons/si";
@@ -24,7 +25,7 @@ export default function Contact({ dict }: ContactProps) {
         <Separator />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Card className="md:col-span-2 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            <Card3D><Card className="md:col-span-2 py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.email}
@@ -47,8 +48,8 @@ export default function Contact({ dict }: ContactProps) {
                         <ArrowUpRight />
                     </a>
                 </CardFooter>
-            </Card>
-            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            </Card></Card3D>
+            <Card3D><Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.instagram}
@@ -71,8 +72,8 @@ export default function Contact({ dict }: ContactProps) {
                         <ArrowUpRight />
                     </a>
                 </CardFooter>
-            </Card>
-            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            </Card></Card3D>
+            <Card3D><Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.linkedin}
@@ -95,8 +96,8 @@ export default function Contact({ dict }: ContactProps) {
                         <ArrowUpRight />
                     </a>
                 </CardFooter>
-            </Card>
-            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            </Card></Card3D>
+            <Card3D><Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.tiktok}
@@ -119,8 +120,8 @@ export default function Contact({ dict }: ContactProps) {
                         <ArrowUpRight />
                     </a>
                 </CardFooter>
-            </Card>
-            <Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-1!">
+            </Card></Card3D>
+            <Card3D><Card className="md:col-span-2 lg:col-span-1 py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-1!">
                 <CardHeader className="">
                     <h2 className="text-lg md:text-xl tracking-tight text-primary">
                         {dict.github}
@@ -143,7 +144,7 @@ export default function Contact({ dict }: ContactProps) {
                         <ArrowUpRight />
                     </a>
                 </CardFooter>
-            </Card>
+            </Card></Card3D>
         </div>
       </div>
     </section>

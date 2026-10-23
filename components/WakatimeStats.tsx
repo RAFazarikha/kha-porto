@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts"
+import { Card3D } from "@/components/Card3D";
 import {
   Card,
   CardContent,
@@ -70,55 +71,55 @@ export default function WakatimeStats({ dict }: WakaProps) {
 
   return (
     <div className='grid grid-cols-1 md:grid-cols-6 gap-4'>
-        <Card className='md:col-span-3 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!' size='sm'>
+        <Card3D className="md:col-span-3"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!' size='sm'>
             <CardHeader>
                 <CardTitle>{dict.startDate}</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-base text-primary font-bold">{data.overview.startDate}</p>
             </CardContent>
-        </Card>
-        <Card className='md:col-span-3 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!' size='sm'>
+        </Card></Card3D>
+        <Card3D className="md:col-span-3"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!' size='sm'>
             <CardHeader>
                 <CardTitle>{dict.endDate}</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-base text-primary font-bold">{data.overview.endDate}</p>
             </CardContent>
-        </Card>
-        <Card className='md:col-span-3 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!' size='sm'>
+        </Card></Card3D>
+        <Card3D className="md:col-span-3"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!' size='sm'>
             <CardHeader>
                 <CardTitle>{dict.dailyAverage}</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-base text-primary font-bold">{data.overview.dailyAverage}</p>
             </CardContent>
-        </Card>
-        <Card className='md:col-span-3 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!' size='sm'>
+        </Card></Card3D>
+        <Card3D className="md:col-span-3"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!' size='sm'>
             <CardHeader>
                 <CardTitle>{dict.totalThisWeek}</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-base text-primary font-bold">{data.overview.totalThisWeek}</p>
             </CardContent>
-        </Card>
-        <Card className='md:col-span-3 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!' size='sm'>
+        </Card></Card3D>
+        <Card3D className="md:col-span-3"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!' size='sm'>
             <CardHeader>
                 <CardTitle>{dict.bestDayDate}</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-base text-primary font-bold">{data.overview.bestDayDate} ({data.overview.bestDayText})</p>
             </CardContent>
-        </Card>
-        <Card className='md:col-span-3 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border gap-0!' size='sm'>
+        </Card></Card3D>
+        <Card3D className="md:col-span-3"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border gap-0!' size='sm'>
             <CardHeader>
                 <CardTitle>{dict.allTimeTotal}</CardTitle>
             </CardHeader>
             <CardContent>
                 <p className="text-base text-primary font-bold">{data.overview.allTimeTotal}</p>
             </CardContent>
-        </Card>
-        <Card className='md:col-span-6 py-6 rounded-lg hover:shadow transition-all duration-300 transform hover:-translate-y-1 border'>
+        </Card></Card3D>
+        <Card3D className="md:col-span-6"><Card className='py-6 rounded-lg hover:shadow transition-shadow duration-300 border'>
             <CardHeader>
                 <CardTitle>{dict.languages}</CardTitle>
             </CardHeader>
@@ -163,7 +164,7 @@ export default function WakatimeStats({ dict }: WakaProps) {
                 </BarChart>
                 </ChartContainer>
             </CardContent>
-        </Card>
+        </Card></Card3D>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/dictionaries/getDictionary";
-import { Inter } from "next/font/google";
+import { Inter, Lora, Nunito, DM_Sans, JetBrains_Mono, Fira_Code } from "next/font/google";
 import "../globals.css"; // (Sesuaikan path jika diperlukan)
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { TooltipProvider } from "@/components/ui/tooltip"
@@ -57,7 +57,13 @@ export async function generateMetadata({
   };
 }
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const lora = Lora({ subsets: ["latin"], variable: "--font-lora" });
+const nunito = Nunito({ subsets: ["latin"], variable: "--font-nunito" });
+const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
+const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains-mono" });
+const firaCode = Fira_Code({ subsets: ["latin"], variable: "--font-fira-code" });
+const fontVars = [inter, lora, nunito, dmSans, jetbrains, firaCode].map((f) => f.variable).join(" ");
 
 // 1. Tambahkan kata 'async' di sini
 export default async function RootLayout({
@@ -75,7 +81,7 @@ export default async function RootLayout({
 
   return (
     // 4. Gunakan variabel 'lang' yang sudah di-await
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={lang} className={fontVars} suppressHydrationWarning>
       <head>
         <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style></noscript>
         <Script
@@ -84,12 +90,12 @@ export default async function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`${inter.className} transition-colors duration-300 selection:bg-secondary md:p-4 lg:p-0`}
+        className={`transition-colors duration-300 selection:bg-secondary md:p-4 lg:p-0`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
-          themes={["light", "dark", "cyberpunk", "brutalism", "vintage"]}
+          defaultTheme="gold"
+          themes={["paper", "gold", "pop", "ember", "blueprint"]}
           disableTransitionOnChange
         >
           <SplashScreen />

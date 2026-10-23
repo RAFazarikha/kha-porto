@@ -11,6 +11,7 @@ interface AboutProps {
   };
 }
 
+// ponytail: pemanis About = timeline glow + marker bar pakai Tailwind group util, tanpa library baru
 export default function About({ dict }: AboutProps) {
 
   return (
@@ -57,17 +58,21 @@ export default function About({ dict }: AboutProps) {
           <p>{dict.subTitleExperience}</p>
         </div>
         <Separator />
-        <ul className="space-y-4">
+        {/* Timeline vertikal: garis + bullet glow, hover item menyala */}
+        <ol className="relative ml-2 border-l-2 border-primary/20 space-y-5">
           {dict.experiences.map((e, i) => (
-            <li key={e.role}>
-            <Reveal delay={i * 0.08}>
-              <p className="font-medium">{e.role}</p>
-              <p className="text-sm">{e.org}</p>
-              <p className="text-xs text-muted-foreground">{[e.period, e.place].filter(Boolean).join(" · ")}</p>
-            </Reveal>
+            <li key={e.role} className="group relative pl-6">
+              <span aria-hidden="true" className="absolute -left-[7px] top-[14px] size-3 rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-primary group-hover:shadow-[0_0_12px_var(--primary)] motion-reduce:transition-none" />
+              <div className="rounded-md -mx-2 px-2 py-1 transition-colors duration-200 hover:bg-accent/40 motion-reduce:transition-none">
+                <Reveal delay={i * 0.08}>
+                  <p className="font-medium">{e.role}</p>
+                  <p className="text-sm">{e.org}</p>
+                  <p className="text-xs text-muted-foreground">{[e.period, e.place].filter(Boolean).join(" · ")}</p>
+                </Reveal>
+              </div>
             </li>
           ))}
-        </ul>
+        </ol>
       </div>
 
       <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
@@ -78,16 +83,33 @@ export default function About({ dict }: AboutProps) {
           <p>{dict.subTitleCert}</p>
         </div>
         <Separator />
+        {/* Badge sertifikat: bar pendek memanjang & menyala saat hover */}
         <ul className="space-y-4">
           {dict.certificates.map((c, i) => (
-            <li key={c.title} className="transition-transform duration-300 hover:-translate-y-1 hover:rotate-1 motion-reduce:transform-none">
-              <Reveal delay={i * 0.08}>
-              {c.file ? (
-                <a href={`/sertifikat/${encodeURIComponent(c.file)}`} target="_blank" rel="noopener noreferrer" className="font-medium hover:underline">{c.title}</a>
-              ) : (
-                <p className="font-medium">{c.title}</p>
-              )}
-              <p className="text-xs text-muted-foreground">{c.issuer} · {c.year}</p>
+            <li
+              key={c.title}
+              className="group flex items-center gap-3 rounded-md py-1 transition-colors duration-200 hover:bg-accent/40 motion-reduce:transition-none"
+            >
+              <span
+                aria-hidden="true"
+                className="h-1.5 w-3 shrink-0 rounded-full bg-primary/40 transition-all duration-300 group-hover:w-12 group-hover:bg-primary group-hover:shadow-[0_0_10px_var(--primary)] motion-reduce:transition-none motion-reduce:group-hover:w-3"
+              />
+              <Reveal delay={i * 0.08} className="flex-1">
+                {c.file ? (
+                  <a
+                    href={`/sertifikat/${encodeURIComponent(c.file)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block font-medium transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none hover:underline underline-offset-2"
+                  >
+                    {c.title}
+                  </a>
+                ) : (
+                  <p className="font-medium transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none">
+                    {c.title}
+                  </p>
+                )}
+                <p className="text-xs text-muted-foreground">{c.issuer} · {c.year}</p>
               </Reveal>
             </li>
           ))}
