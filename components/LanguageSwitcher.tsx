@@ -1,31 +1,46 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button"
-import { ButtonGroup } from "@/components/ui/button-group"
 
-export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {
+export interface LangDict {
+  language: string;
+  languages: { id: string; en: string };
+}
+
+const LANGS = ["id", "en"] as const;
+
+export default function LanguageSwitcher({ currentLang, dict, large = false }: { currentLang: string; dict: LangDict; large?: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const switchTo = (newLang: "id" | "en") => {
+  const switchTo = (newLang: (typeof LANGS)[number]) => {
     if (newLang === currentLang) return;
-    
-    // CARA LEBIH AMAN: Memecah URL dan hanya mengganti bagian bahasanya saja
-    // Contoh: "/id/tentang" -> ["", "id", "tentang"] -> ubah index 1 -> gabungkan lagi
+    // Ganti hanya segmen bahasa: /id/about -> /en/about
     const segments = pathname.split("/");
-    if (segments.length > 1) {
-      segments[1] = newLang; 
-    }
-    const newPath = segments.join("/");
-    
-    router.push(newPath);
+    if (segments.length > 1) segments[1] = newLang;
+    router.push(segments.join("/"));
   };
 
   return (
-    <ButtonGroup>
-      <Button variant={currentLang === "id" ? "default" : "outline"} aria-pressed={currentLang === "id"} className="pointer-coarse:h-11 pointer-coarse:min-w-11" onClick={() => switchTo("id")}>ID</Button>
-      <Button variant={currentLang === "en" ? "default" : "outline"} aria-pressed={currentLang === "en"} className="pointer-coarse:h-11 pointer-coarse:min-w-11" onClick={() => switchTo("en")}>EN</Button>
-    </ButtonGroup>
+    <div role="group" aria-label={dict.language} className="inline-flex items-center rounded-(--radius) border border-border p-0.5">
+      {LANGS.map((l) => {
+        const on = currentLang === l;
+        return (
+          <button
+            key={l}
+            type="button"
+            lang={l}
+            aria-pressed={on}
+            aria-label={dict.languages[l]}
+            onClick={() => switchTo(l)}
+            className={`cursor-pointer rounded-[calc(var(--radius)-2px)] px-2.5 text-xs font-bold outline-none focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-ring ${
+              large ? "min-h-11 min-w-12" : "min-h-8 min-w-9 pointer-coarse:min-h-11 pointer-coarse:min-w-11"
+            } ${on ? "bg-primary text-primary-foreground" : "text-foreground hover:bg-muted"}`}
+          >
+            {l.toUpperCase()}
+          </button>
+        );
+      })}
+    </div>
   );
 }

@@ -145,5 +145,30 @@
         "description": "Full-stack Web Developer dari Indonesia yang berfokus pada pengembangan aplikasi web modern menggunakan Next.js, React, Laravel, dan framework modern lainnya.",
         "ogTitle": "Rachmad Aziz Fazarikha - Full-stack Developer",
         "ogDescription": "Portfolio Full-stack Web Developer dengan pengalaman membangun aplikasi web modern."
+    },
+    "nav": {
+        "mainNav": "Navigasi utama",
+        "home": "Beranda",
+        "about": "Tentang",
+        "projects": "Proyek",
+        "dashboard": "Dasbor",
+        "contact": "Kontak",
+        "cv": "Unduh CV",
+        "openMenu": "Buka menu",
+        "closeMenu": "Tutup menu",
+        "menuTitle": "Menu",
+        "themeLabel": "Pilih gaya tampilan",
+        "language": "Bahasa",
+        "languages": {
+            "id": "Bahasa Indonesia",
+            "en": "English"
+        },
+        "themes": {
+            "minimal": "Minimal",
+            "bento": "Bento",
+            "bold": "Bold Type",
+            "brutal": "Neo Brutal",
+            "pblur": "Blur"
+        }
     }
 }

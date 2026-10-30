@@ -81,6 +81,7 @@ export default async function RootLayout({
   const resolvedParams = await params;
   const lang = resolvedParams.lang;
   if (!isLocale(lang)) notFound();
+  const dict = await getDictionary(lang);
   const saved = (await cookies()).get(THEME_COOKIE_NAME)?.value;
   const theme = isThemeId(saved) ? saved : DEFAULT_THEME;
 
@@ -111,7 +112,7 @@ export default async function RootLayout({
           disableTransitionOnChange
         >
           <SplashScreen />
-          <Navbar />
+          <Navbar dict={dict.nav} />
           <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-6xl px-2 py-6 md:px-4 font-sans outline-none">
             <TooltipProvider delay={100} timeout={100}>
               <TopLoader />
