@@ -59,7 +59,7 @@ export default function ThemeToggle() {
             tabIndex={on || (!active && id === THEMES[0]) ? 0 : -1}
             title={name[lang]}
             onClick={() => switchTheme(id)}
-            className={`flex items-center gap-1.5 px-2 py-1.5 text-xs rounded-[calc(var(--radius)/1.5)] transition-colors focus-visible:outline-2 focus-visible:outline-ring cursor-pointer ${
+            className={`flex items-center gap-1.5 px-2 py-1.5 pointer-coarse:min-h-11 pointer-coarse:min-w-11 pointer-coarse:justify-center text-xs rounded-[calc(var(--radius)/1.5)] transition-colors focus-visible:outline-2 focus-visible:outline-ring cursor-pointer ${
               on ? "bg-primary text-primary-foreground font-semibold" : "hover:bg-muted text-foreground"
             }`}
           >

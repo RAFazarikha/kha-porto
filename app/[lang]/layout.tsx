@@ -95,8 +95,14 @@ export default async function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className={`transition-colors duration-300 selection:bg-secondary `}
+        className={`transition-colors duration-300 selection:bg-secondary`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-ring font-medium text-sm"
+        >
+          {lang === "id" ? "Lewati ke konten utama" : "Skip to main content"}
+        </a>
         <ThemeProvider
           attribute="class"
           defaultTheme={theme}
@@ -106,12 +112,12 @@ export default async function RootLayout({
         >
           <SplashScreen />
           <Navbar />
-          <div className="mx-auto w-full max-w-6xl px-2 py-6 md:px-4 font-sans">
+          <main id="main-content" tabIndex={-1} className="mx-auto w-full max-w-6xl px-2 py-6 md:px-4 font-sans outline-none">
             <TooltipProvider delay={100} timeout={100}>
               <TopLoader />
               {children}
             </TooltipProvider>
-          </div>
+          </main>
         </ThemeProvider>
         <script
           type="application/ld+json"

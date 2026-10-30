@@ -17,7 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header data-site-header="" className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">
+    <header data-site-header="" className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur pt-[env(safe-area-inset-top)]">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-2">
         <Link href={`/${lang}`} className="flex items-center gap-2 font-bold tracking-tight">
           <Image src={icon} alt="" width={32} height={32} className="size-8 rounded-(--radius) object-contain" />
@@ -36,7 +36,7 @@ export default function Navbar() {
                 key={href}
                 href={href}
                 aria-current={current ? "page" : undefined}
-                className={`px-3 py-1.5 text-sm whitespace-nowrap rounded-(--radius) ${current ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+                className={`inline-flex items-center px-3 py-2 text-sm whitespace-nowrap rounded-(--radius) min-h-[44px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${current ? "bg-primary text-primary-foreground font-semibold" : "hover:bg-muted"}`}
               >
                 {label}
               </Link>

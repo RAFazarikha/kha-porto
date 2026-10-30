@@ -37,10 +37,12 @@ export default function SplashScreen() {
       return () => clearTimeout(quickHideTimer);
     } else {
       // Jika belum pernah lihat, jalankan animasi selama 2.5 detik
+      const reduce = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const duration = reduce ? 0 : 1200; // dipersingkat dari 2500ms agar LCP recruiter cepat
       const timer = setTimeout(() => {
         setIsVisible(false);
         sessionStorage.setItem("hasSeenSplash", "true");
-      }, 2500);
+      }, duration);
 
       return () => clearTimeout(timer);
     }

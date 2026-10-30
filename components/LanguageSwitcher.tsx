@@ -24,8 +24,8 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
 
   return (
     <ButtonGroup>
-      <Button variant={currentLang === "id" ? "default" : "outline"} aria-pressed={currentLang === "id"} onClick={() => switchTo("id")}>ID</Button>
-      <Button variant={currentLang === "en" ? "default" : "outline"} aria-pressed={currentLang === "en"} onClick={() => switchTo("en")}>EN</Button>
+      <Button variant={currentLang === "id" ? "default" : "outline"} aria-pressed={currentLang === "id"} className="pointer-coarse:h-11 pointer-coarse:min-w-11" onClick={() => switchTo("id")}>ID</Button>
+      <Button variant={currentLang === "en" ? "default" : "outline"} aria-pressed={currentLang === "en"} className="pointer-coarse:h-11 pointer-coarse:min-w-11" onClick={() => switchTo("en")}>EN</Button>
     </ButtonGroup>
   );
 }

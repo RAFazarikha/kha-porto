@@ -25,8 +25,8 @@ Salin `.env` sendiri; file ini masuk `.gitignore` dan tidak pernah di-commit.
 
 ## Menjalankan Lokal
 ```bash
-npm install
-npm run dev   # http://localhost:3000 → redirect ke /en (default locale, lihat proxy.ts)
+bun install
+bun run dev   # http://localhost:3000 → redirect ke /en (default locale, lihat proxy.ts)
 ```
 
 ## Deploy (Docker + GitHub Actions)
