@@ -1,97 +1,49 @@
 "use client";
 
 import Link from "next/link";
-import dynamic from "next/dynamic";
-import { useParams } from "next/navigation";
+import Image from "next/image";
+import icon from "@/app/icon.png";
+import { useParams, usePathname } from "next/navigation";
 import LanguageSwitcher from "./LanguageSwitcher";
+import ThemeToggle from "./ThemeToggle";
 
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
-
-// dynamic import tetap
-const ThemeToggle = dynamic(() => import("./ThemeToggle"), {
-  ssr: false,
-  loading: () => <div className="w-9 h-9" />,
-});
+const nav = {
+  id: [["", "Beranda"], ["/about", "Tentang"], ["/projects", "Proyek"], ["/dashboard", "Dasbor"], ["/contact", "Kontak"]],
+  en: [["", "Home"], ["/about", "About"], ["/projects", "Projects"], ["/dashboard", "Dashboard"], ["/contact", "Contact"]],
+} as const;
 
 export default function Navbar() {
-  const params = useParams();
-  const lang = (params?.lang as "id" | "en") || "id";
-
-  const navTexts = {
-    id: { home: "Beranda", about: "Tentang", projects: "Proyek" },
-    en: { home: "Home", about: "About", projects: "Projects" },
-  };
-  const t = navTexts[lang] || navTexts.id;
+  const lang = useParams()?.lang === "id" ? "id" : "en";
+  const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md border-b transition-colors">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          
-          {/* Logo */}
-          <div className="flex shrink-0">
-            <Link
-              href={`/${lang}`}
-              className="font-bold text-xl tracking-tight"
-            >
-              Kha
-              <span className="text-primary">
-                Portfolio
-              </span>
-              .
-            </Link>
-          </div>
-
-          {/* Navigation Menu */}
-          <div className="hidden md:flex">
-            <NavigationMenu>
-              <NavigationMenuList className="gap-6">
-                
-                <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    render={<Link href={`/${lang}`} />}
-                    className={navigationMenuTriggerStyle()}
-                  >
-                    {t.home}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    render={<Link href={`/${lang}/about`} />}
-                    className={navigationMenuTriggerStyle()}
-                  >
-                    {t.about}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink 
-                    render={<Link href={`/${lang}/projects`} />}
-                    className={navigationMenuTriggerStyle()}
-                  >
-                    {t.projects}
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-
-          {/* Actions */}
-          <div className="flex items-center gap-4">
-            <LanguageSwitcher currentLang={lang} />
-            <ThemeToggle />
-          </div>
-
+    <header data-site-header="" className="sticky top-0 z-50 border-b bg-background/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-2">
+        <Link href={`/${lang}`} className="flex items-center gap-2 font-bold tracking-tight">
+          <Image src={icon} alt="" width={32} height={32} className="size-8 rounded-(--radius) object-contain" />
+          <span>Kha<span className="text-primary">Portfolio</span>.</span>
+        </Link>
+        <div className="flex items-center gap-2">
+          <LanguageSwitcher currentLang={lang} />
+          <ThemeToggle />
         </div>
+        <nav aria-label="Main" className="-mx-1 flex w-full gap-1 overflow-x-auto">
+          {nav[lang].map(([path, label]) => {
+            const href = `/${lang}${path}`;
+            const current = pathname === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-current={current ? "page" : undefined}
+                className={`px-3 py-1.5 text-sm whitespace-nowrap rounded-(--radius) ${current ? "bg-primary text-primary-foreground" : "hover:bg-muted"}`}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

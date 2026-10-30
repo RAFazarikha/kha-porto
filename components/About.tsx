@@ -1,7 +1,7 @@
 import { Award, Briefcase, GraduationCap } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import Educations from "@/components/Educations";
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";
 
 interface AboutProps {
   dict: {
@@ -11,62 +11,46 @@ interface AboutProps {
   };
 }
 
-// ponytail: pemanis About = timeline glow + marker bar pakai Tailwind group util, tanpa library baru
 export default function About({ dict }: AboutProps) {
-
   return (
-    <section id="about" className="transition-colors space-y-3 lg:space-y-5 mb-5">
-      <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+    <section id="about" className="transition-colors space-y-4 md:space-y-6 mb-8">
+      <div data-themed-card="" className="relative space-y-4 py-7 px-4 sm:px-6 lg:px-8 border rounded-lg shadow bg-card text-card-foreground">
         <div>
-          <h1 className="text-2xl md:text-3xl tracking-tight text-primary">{dict.title}</h1>
-          <p className="flex flex-row">
-            {dict.subtitle}
-          </p>
+          <h1 data-display-title="" className="text-2xl md:text-3xl font-bold tracking-tight text-primary">{dict.title}</h1>
+          <p className="text-sm text-muted-foreground">{dict.subtitle}</p>
         </div>
-
         <Separator />
-
-        <p className="text-base leading-relaxed text-justify">
-          {dict.description}
-        </p>
-
-        <p className="text-base leading-relaxed text-justify">
-          {dict.description2}
-        </p>
+        <p className="text-base leading-relaxed">{dict.description}</p>
+        <p className="text-base leading-relaxed text-muted-foreground">{dict.description2}</p>
       </div>
 
-      <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+      <div data-themed-card="" className="relative space-y-4 py-7 px-4 sm:px-6 lg:px-8 border rounded-lg shadow bg-card text-card-foreground">
         <div>
-          <h2 className="flex flex-row gap-2 text-xl md:text-2xl tracking-tight text-primary">
-            <GraduationCap size={30} /><span>{dict.titleEducation}</span>
+          <h2 className="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight text-primary">
+            <GraduationCap className="size-6" /><span>{dict.titleEducation}</span>
           </h2>
-          <p className="flex flex-row">
-            {dict.subTitleEducation}
-          </p>
+          <p className="text-sm text-muted-foreground">{dict.subTitleEducation}</p>
         </div>
-
         <Separator />
-
         <Educations />
       </div>
 
-      <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+      <div data-themed-card="" className="relative space-y-4 py-7 px-4 sm:px-6 lg:px-8 border rounded-lg shadow bg-card text-card-foreground">
         <div>
-          <h2 className="flex flex-row gap-2 text-xl md:text-2xl tracking-tight text-primary">
-            <Briefcase size={30} /><span>{dict.titleExperience}</span>
+          <h2 className="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight text-primary">
+            <Briefcase className="size-6" /><span>{dict.titleExperience}</span>
           </h2>
-          <p>{dict.subTitleExperience}</p>
+          <p className="text-sm text-muted-foreground">{dict.subTitleExperience}</p>
         </div>
         <Separator />
-        {/* Timeline vertikal: garis + bullet glow, hover item menyala */}
-        <ol className="relative ml-2 border-l-2 border-primary/20 space-y-5">
+        <ol className="relative ml-2 border-l-2 border-primary/20 space-y-4">
           {dict.experiences.map((e, i) => (
             <li key={e.role} className="group relative pl-6">
-              <span aria-hidden="true" className="absolute -left-[7px] top-[14px] size-3 rounded-full bg-primary/30 transition-all duration-300 group-hover:bg-primary group-hover:shadow-[0_0_12px_var(--primary)] motion-reduce:transition-none" />
-              <div className="rounded-md -mx-2 px-2 py-1 transition-colors duration-200 hover:bg-accent/40 motion-reduce:transition-none">
+              <span aria-hidden="true" className="absolute -left-[7px] top-[14px] size-3 rounded-full bg-primary/40 transition-all duration-300 group-hover:bg-primary group-hover:scale-125 motion-reduce:transition-none" />
+              <div className="rounded-md -mx-2 px-2 py-1 transition-colors duration-200 hover:bg-muted motion-reduce:transition-none">
                 <Reveal delay={i * 0.08}>
-                  <p className="font-medium">{e.role}</p>
-                  <p className="text-sm">{e.org}</p>
+                  <p className="font-semibold text-base in-[.bold]:text-xl">{e.role}</p>
+                  <p className="text-sm text-foreground">{e.org}</p>
                   <p className="text-xs text-muted-foreground">{[e.period, e.place].filter(Boolean).join(" · ")}</p>
                 </Reveal>
               </div>
@@ -75,24 +59,23 @@ export default function About({ dict }: AboutProps) {
         </ol>
       </div>
 
-      <div className="relative space-y-4 mx-2 md:ml-3 md:mr-0 py-7 lg:ml-5 px-4 sm:px-6 lg:px-8 border rounded-lg shadow">
+      <div data-themed-card="" className="relative space-y-4 py-7 px-4 sm:px-6 lg:px-8 border rounded-lg shadow bg-card text-card-foreground">
         <div>
-          <h2 className="flex flex-row gap-2 text-xl md:text-2xl tracking-tight text-primary">
-            <Award size={30} /><span>{dict.titleCert}</span>
+          <h2 className="flex items-center gap-2 text-xl md:text-2xl font-bold tracking-tight text-primary">
+            <Award className="size-6" /><span>{dict.titleCert}</span>
           </h2>
-          <p>{dict.subTitleCert}</p>
+          <p className="text-sm text-muted-foreground">{dict.subTitleCert}</p>
         </div>
         <Separator />
-        {/* Badge sertifikat: bar pendek memanjang & menyala saat hover */}
-        <ul className="space-y-4">
+        <ul className="space-y-3">
           {dict.certificates.map((c, i) => (
             <li
               key={c.title}
-              className="group flex items-center gap-3 rounded-md py-1 transition-colors duration-200 hover:bg-accent/40 motion-reduce:transition-none"
+              className="group flex items-center gap-3 rounded-md py-1 transition-colors duration-200 hover:bg-muted motion-reduce:transition-none"
             >
               <span
                 aria-hidden="true"
-                className="h-1.5 w-3 shrink-0 rounded-full bg-primary/40 transition-all duration-300 group-hover:w-12 group-hover:bg-primary group-hover:shadow-[0_0_10px_var(--primary)] motion-reduce:transition-none motion-reduce:group-hover:w-3"
+                className="h-1.5 w-3 shrink-0 rounded-full bg-primary/40 transition-all duration-300 group-hover:w-8 group-hover:bg-primary motion-reduce:transition-none"
               />
               <Reveal delay={i * 0.08} className="flex-1">
                 {c.file ? (
@@ -100,14 +83,12 @@ export default function About({ dict }: AboutProps) {
                     href={`/sertifikat/${encodeURIComponent(c.file)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block font-medium transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none hover:underline underline-offset-2"
+                    className="block font-medium hover:underline underline-offset-2 text-sm md:text-base in-[.bold]:text-lg"
                   >
                     {c.title}
                   </a>
                 ) : (
-                  <p className="font-medium transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transform-none">
-                    {c.title}
-                  </p>
+                  <p className="font-medium text-sm md:text-base in-[.bold]:text-lg">{c.title}</p>
                 )}
                 <p className="text-xs text-muted-foreground">{c.issuer} · {c.year}</p>
               </Reveal>

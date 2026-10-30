@@ -20,8 +20,8 @@ export default async function Home({
   const dict = await getDictionary(lang);
 
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       <Hero dict={dict.home} />
-    </main>
+    </div>
   );
 }

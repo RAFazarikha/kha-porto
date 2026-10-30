@@ -1,10 +1,10 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useTransform, useReducedMotion, type HTMLMotionProps } from "framer-motion";
 import type { PointerEvent } from "react";
 
 // ponytail: tilt 3D via framer-motion CSS transform (bukan WebGL); kalau butuh mesh 3D sungguhan → upgrade ke R3F
-export function Card3D({ children, className }: { children: React.ReactNode; className?: string }) {
+export function Card3D({ children, className, ...props }: HTMLMotionProps<"div">) {
   const reduce = useReducedMotion();
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -30,6 +30,7 @@ export function Card3D({ children, className }: { children: React.ReactNode; cla
       onPointerLeave={leave}
       style={reduce ? undefined : { rotateX, rotateY, transformPerspective: 900 }}
       className={className}
+      {...props}
     >
       {children}
     </motion.div>
