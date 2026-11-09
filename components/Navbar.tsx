@@ -9,6 +9,8 @@ import icon from "@/app/icon.png";
 import { useParams, usePathname } from "next/navigation";
 import LanguageSwitcher, { type LangDict } from "./LanguageSwitcher";
 import ThemeToggle, { type ThemeDict } from "./ThemeToggle";
+import SoundToggle from "./SoundToggle";
+import { playSfx } from "@/lib/sfx";
 import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 export type NavDict = LangDict &
@@ -23,6 +25,7 @@ export type NavDict = LangDict &
     openMenu: string;
     closeMenu: string;
     menuTitle: string;
+    sound: string;
   };
 
 const CV_URL = "/cv/Rachmad_Aziz_Fazarikha_CV.pdf";
@@ -112,10 +115,14 @@ export default function Navbar({ dict: t }: { dict: NavDict }) {
         <div className="hidden shrink-0 items-center gap-2 md:flex">
           <LanguageSwitcher currentLang={lang} dict={t} />
           <ThemeToggle dict={t} />
+          <SoundToggle label={t.sound} />
           {cv}
         </div>
 
-        <Sheet open={open} onOpenChange={(o) => setOpenFor(o ? pathname : null)}>
+        <Sheet open={open} onOpenChange={(o) => {
+          setOpenFor(o ? pathname : null);
+          playSfx(o ? "open" : "close");
+        }}>
           <SheetTrigger
             aria-label={t.openMenu}
             className="inline-flex size-11 cursor-pointer items-center justify-center rounded-(--radius) border border-border text-foreground outline-none hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring md:hidden"
@@ -163,6 +170,7 @@ export default function Navbar({ dict: t }: { dict: NavDict }) {
             <div className="flex flex-col gap-4 border-t border-border p-4">
               <LanguageSwitcher currentLang={lang} dict={t} large />
               <ThemeToggle dict={t} inline />
+              <SoundToggle label={t.sound} inline />
               <a
                 href={CV_URL}
                 download="Rachmad_Aziz_Fazarikha_CV.pdf"

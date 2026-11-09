@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { Popover } from "@base-ui/react/popover";
 import { Check, Palette } from "lucide-react";
 import { THEMES, type ThemeId } from "@/lib/theme";
+import { playSfx } from "@/lib/sfx";
 import { useThemeTransition } from "@/components/theme/useThemeTransition";
 
 export interface ThemeDict {
@@ -30,6 +31,7 @@ function ThemeOptions({ dict, onPick }: { dict: ThemeDict; onPick?: () => void }
     e.preventDefault();
     const next = THEMES[(THEMES.indexOf(theme) + dir + THEMES.length) % THEMES.length];
     switchTheme(next);
+    playSfx("select");
     refs.current[next]?.focus();
   };
 
@@ -49,6 +51,7 @@ function ThemeOptions({ dict, onPick }: { dict: ThemeDict; onPick?: () => void }
             aria-checked={on}
             tabIndex={on ? 0 : -1}
             onClick={() => {
+              if (!on) playSfx("select");
               switchTheme(id);
               onPick?.();
             }}
@@ -74,7 +77,10 @@ export default function ThemeToggle({ dict, inline = false }: { dict: ThemeDict;
   if (inline) return <ThemeOptions dict={dict} />;
 
   return (
-    <Popover.Root open={open} onOpenChange={setOpen}>
+    <Popover.Root open={open} onOpenChange={(o) => {
+        setOpen(o);
+        playSfx(o ? "open" : "close");
+      }}>
       <Popover.Trigger
         aria-label={dict.themeLabel}
         data-nav-icon=""

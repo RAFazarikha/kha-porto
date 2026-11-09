@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, usePathname } from "next/navigation";
+import { playSfx } from "@/lib/sfx";
 
 export interface LangDict {
   language: string;
@@ -18,6 +19,7 @@ export default function LanguageSwitcher({ currentLang, dict, large = false }: {
     // Ganti hanya segmen bahasa: /id/about -> /en/about
     const segments = pathname.split("/");
     if (segments.length > 1) segments[1] = newLang;
+    playSfx("select");
     router.push(segments.join("/"));
   };
 

@@ -28,6 +28,7 @@ export function Card3D({ children, className, ...props }: HTMLMotionProps<"div">
     <motion.div
       onPointerMove={move}
       onPointerLeave={leave}
+      data-hover-sfx=""
       style={reduce ? undefined : { rotateX, rotateY, transformPerspective: 900 }}
       className={className}
       {...props}

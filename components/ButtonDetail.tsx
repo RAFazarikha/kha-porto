@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/drawer"
 import { cn } from "@/lib/utils"
 import { Badge } from "@/components/ui/badge";
+import { playSfx } from "@/lib/sfx";
 
 export interface ProjectItem {
   title: string;
@@ -51,10 +52,14 @@ interface ProjectDetailsProps extends React.ComponentProps<"div"> {
 export default function ButtonDetail({ dict, title }: DetailProps) {
   const [open, setOpen] = React.useState(false)
   const isMobile = useIsMobile()
+  const onOpenChange = (o: boolean) => {
+    setOpen(o)
+    playSfx(o ? "open" : "close")
+  }
 
   if (!isMobile) {
     return (
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogTrigger render={<Button variant="outline" size={"lg"}><ClipboardList className="w-4 h-4" />Detail</Button>} />
         <DialogContent className="sm:max-w-4xl sm:max-h-sm">
           <DialogHeader>
@@ -88,7 +93,7 @@ export default function ButtonDetail({ dict, title }: DetailProps) {
   }
 
   return (
-    <Drawer open={open} onOpenChange={setOpen}>
+    <Drawer open={open} onOpenChange={onOpenChange}>
       <DrawerTrigger asChild>
         <Button variant="outline" size={"lg"}><ClipboardList className="w-4 h-4" />Detail</Button>
       </DrawerTrigger>
