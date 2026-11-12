@@ -3,7 +3,12 @@
     {
       "title": "KWT Dorang Cinta",
       "description": "Aplikasi untuk mendukung kegiatan promosi dan pengelolaan di KWT Dorang Cinta, Surabaya.",
-      "tech": ["Next.js", "Tailwind CSS", "Shadcn UI", "Supabase"],
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Supabase"
+      ],
       "github": "https://github.com/RAFazarikha/kwt-dorang-cinta",
       "live": "https://kwt-dorang-cinta.vercel.app/",
       "thumbnail": "/projects/kwt.png",
@@ -19,7 +24,11 @@
     {
       "title": "Peta Kuliner Sumenep",
       "description": "Aplikasi untuk pencarian, visualisasi peta, dan pengelompokan UMKM kuliner di Sumenep.",
-      "tech": ["Laravel", "Tailwind CSS", "MySQL"],
+      "tech": [
+        "Laravel",
+        "Tailwind CSS",
+        "MySQL"
+      ],
       "github": "https://github.com/RAFazarikha/webgis-umkm",
       "live": "https://petakulinersumenep.my.id/",
       "thumbnail": "/projects/petakuliner.png",
@@ -35,7 +44,12 @@
     {
       "title": "Open Data Disabilitas",
       "description": "Sistem open data disabilitas yang digunakan oleh Komisi Nasional Disabilitas (KND).",
-      "tech": ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
+      "tech": [
+        "CodeIgniter",
+        "PHP",
+        "MySQL",
+        "Tailwind"
+      ],
       "github": "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
       "live": "https://opendatadisabilitas.com/",
       "thumbnail": "/projects/knd.png",
@@ -50,7 +64,13 @@
     {
       "title": "Roompi - Room Booking Platform",
       "description": "Aplikasi booking ruangan untuk kebutuhan organisasi ataupun perusahaan.",
-      "tech": ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
+      "tech": [
+        "Laravel",
+        "React",
+        "MySQL",
+        "Tailwind CSS",
+        "REST APIs"
+      ],
       "github": "https://github.com/RAFazarikha/peminjaman-ruangan-online",
       "live": "https://roompi-nfa.netlify.app/",
       "thumbnail": "/projects/roompi.png",
@@ -61,13 +81,64 @@
         "Menerapkan fitur autentikasi dan booking ruangan.",
         "Mengembangkan fitur pencarian dan filtering ruangan."
       ]
+    },
+    {
+      "title": "Selaras - Pencatat Anggaran Harian",
+      "description": "PWA pencatat anggaran harian dengan jatah harian adaptif, buku kas, dan notifikasi Discord.",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Recharts"
+      ],
+      "github": "https://github.com/RAFazarikha/selaras-app",
+      "live": "https://selaras-rachmad-aziz-fazarikhas-projects.vercel.app",
+      "thumbnail": "/projects/selaras.png",
+      "overview": "Aplikasi keuangan mobile-first untuk mengatur uang per periode (misalnya gajian ke gajian). Jatah harian dihitung ulang dari saldo nyata, dengan pembandingan rencana vs aktual, buku kas harian, analitik, dan ringkasan harian lewat Discord. Aturan data dijaga di database (constraint, trigger, RLS).",
+      "job": [
+        "Membangun aplikasi dengan Next.js 16, Tailwind CSS v4, dan Shadcn UI.",
+        "Merancang logika anggaran harian adaptif yang diuji dengan unit test.",
+        "Merancang skema Supabase lengkap dengan RLS, trigger, dan pgTAP test.",
+        "Membuat Edge Function dan pg_cron untuk notifikasi dan ringkasan harian ke Discord.",
+        "Menerapkan desain bento glassmorphism yang aksesibel dan responsif."
+      ]
+    },
+    {
+      "title": "Smart Waste Management System",
+      "description": "Pelaporan sampah warga dengan deteksi jenis sampah berbasis AI, portal admin, dan REST API.",
+      "tech": [
+        "Next.js",
+        "Express",
+        "Prisma",
+        "React Native",
+        "FastAPI",
+        "PyTorch",
+        "Supabase"
+      ],
+      "github": "https://github.com/RAFazarikha/smart-waste",
+      "live": "https://smart-waste-six-chi.vercel.app/",
+      "thumbnail": "/projects/smartwaste.png",
+      "overview": "Sistem pelaporan dan pengelolaan sampah: aplikasi mobile untuk warga (foto, GPS, klasifikasi AI), portal web admin, REST API, dan model klasifikasi gambar MobileNetV2 dengan akurasi uji 95,56%. Dibuat untuk technical coding test Bilcode Technology.",
+      "job": [
+        "Membangun REST API dengan Express, Prisma, JWT, dan dokumentasi Swagger.",
+        "Membangun portal admin dengan Next.js, Recharts, dan MapLibre GL.",
+        "Membangun aplikasi mobile dengan React Native (Expo) untuk kamera dan GPS.",
+        "Melatih model klasifikasi MobileNetV2 dan melayaninya via FastAPI.",
+        "Deploy API dengan Docker dan menyusun monorepo dengan skema Zod bersama."
+      ]
     }
   ],
   "en": [
     {
       "title": "KWT Dorang Cinta",
       "description": "An app to support promotional and management activities at KWT Dorang Cinta in Surabaya.",
-      "tech": ["Next.js", "Tailwind CSS", "Shadcn UI", "Supabase"],
+      "tech": [
+        "Next.js",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Supabase"
+      ],
       "github": "https://github.com/RAFazarikha/kwt-dorang-cinta",
       "live": "https://kwt-dorang-cinta.vercel.app/",
       "thumbnail": "/projects/kwt.png",
@@ -83,7 +154,11 @@
     {
       "title": "Peta Kuliner Sumenep",
       "description": "An application for searching, mapping, and clustering culinary MSMEs in Sumenep.",
-      "tech": ["Laravel", "Tailwind CSS", "MySQL"],
+      "tech": [
+        "Laravel",
+        "Tailwind CSS",
+        "MySQL"
+      ],
       "github": "https://github.com/RAFazarikha/webgis-umkm",
       "live": "https://petakulinersumenep.my.id/",
       "thumbnail": "/projects/petakuliner.png",
@@ -99,7 +174,12 @@
     {
       "title": "Open Data Disabilitas",
       "description": "The open data system for people with disabilities used by the National Commission on Disabilities (KND).",
-      "tech": ["CodeIgniter", "PHP", "MySQL", "Tailwind"],
+      "tech": [
+        "CodeIgniter",
+        "PHP",
+        "MySQL",
+        "Tailwind"
+      ],
       "github": "https://gitlab.com/RAFazarikha/opendatakomnasdisabilitas",
       "live": "https://opendatadisabilitas.com/",
       "thumbnail": "/projects/knd.png",
@@ -114,7 +194,13 @@
     {
       "title": "Roompi - Room Booking Platform",
       "description": "A room booking app for organizations and businesses.",
-      "tech": ["Laravel", "React", "MySQL", "Tailwind CSS", "REST APIs"],
+      "tech": [
+        "Laravel",
+        "React",
+        "MySQL",
+        "Tailwind CSS",
+        "REST APIs"
+      ],
       "github": "https://github.com/RAFazarikha/peminjaman-ruangan-online",
       "live": "https://roompi-nfa.netlify.app/",
       "thumbnail": "/projects/roompi.png",
@@ -124,6 +210,52 @@
         "Implementing API calls using Laravel's REST APIs.",
         "Implementing authentication and room booking features.",
         "Developing room search and filtering features."
+      ]
+    },
+    {
+      "title": "Selaras - Daily Budget Tracker",
+      "description": "Budget-tracking PWA with an adaptive daily allowance, daily ledger, and Discord notifications.",
+      "tech": [
+        "Next.js",
+        "Supabase",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Recharts"
+      ],
+      "github": "https://github.com/RAFazarikha/selaras-app",
+      "live": "https://selaras-rachmad-aziz-fazarikhas-projects.vercel.app",
+      "thumbnail": "/projects/selaras.png",
+      "overview": "A mobile-first finance app for managing money per period (e.g. payday to payday). The daily allowance is recalculated from the real balance, comparing plan vs actual, with a daily ledger, analytics, and daily Discord summaries. Data rules are enforced in the database (constraints, triggers, RLS).",
+      "job": [
+        "Built the app with Next.js 16, Tailwind CSS v4, and Shadcn UI.",
+        "Designed the adaptive daily budget logic, covered by unit tests.",
+        "Designed the Supabase schema with RLS, triggers, and pgTAP tests.",
+        "Built Edge Functions and pg_cron jobs for Discord notifications and daily digests.",
+        "Implemented an accessible, responsive bento glassmorphism design."
+      ]
+    },
+    {
+      "title": "Smart Waste Management System",
+      "description": "Citizen waste reporting with AI waste-type detection, an admin portal, and a REST API.",
+      "tech": [
+        "Next.js",
+        "Express",
+        "Prisma",
+        "React Native",
+        "FastAPI",
+        "PyTorch",
+        "Supabase"
+      ],
+      "github": "https://github.com/RAFazarikha/smart-waste",
+      "live": "https://smart-waste-six-chi.vercel.app/",
+      "thumbnail": "/projects/smartwaste.png",
+      "overview": "A waste reporting and management system: a mobile app for citizens (photo, GPS, AI classification), an admin web portal, a REST API, and a MobileNetV2 image classifier with 95.56% test accuracy. Built for the Bilcode Technology technical coding test.",
+      "job": [
+        "Built the REST API with Express, Prisma, JWT, and Swagger docs.",
+        "Built the admin portal with Next.js, Recharts, and MapLibre GL.",
+        "Built the mobile app with React Native (Expo) for camera and GPS.",
+        "Trained a MobileNetV2 classifier and served it through FastAPI.",
+        "Deployed the API with Docker and structured the monorepo with shared Zod schemas."
       ]
     }
   ]
